@@ -1,7 +1,8 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark {% unless page.second-nav or page.instance %}mb-5 shadow-sm{% endunless %}" aria-label="Twelfth navbar example">
     <div class="container">
-        <a href="{{'/' | relative_url}}" class="text-white text-decoration-none fs-1 ">
+        <a href="{{'/' | relative_url}}" class="text-white text-decoration-none fs-1 d-flex align-items-baseline">
             <span><strong>PLAZA</strong></span>
+            <img class="ms-2" alt="PLAZA logo" height="35px" src="{{'/assets/img/logo.svg' | relative_url}}">
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar1" aria-controls="navbar1" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
