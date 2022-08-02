@@ -10,7 +10,7 @@ permalink: assets/css/main.css
 #navbar1 .nav-item>a:not(.dropdown-toggle) {
     border-radius: $btn-border-radius;
     border-bottom-color: $primary;
-    margin-bottom: 4px;
+    margin: 4px 0 4px 0;
     &.active,
     &:hover {
         border-bottom-style: solid;
@@ -21,7 +21,7 @@ permalink: assets/css/main.css
 
 #navbar2 .nav-item>a:not(.dropdown-toggle) {
     border-radius: $btn-border-radius;
-    margin-bottom: 4px;
+    margin: 4px 0 4px 0;
     border-bottom-color: $dark;
     &.active,
     &:hover {
