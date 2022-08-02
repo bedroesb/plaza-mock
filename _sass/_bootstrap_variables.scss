@@ -2,12 +2,13 @@
 $primary:       #29978c;
 $light:         #f5f6f6;
 $dark:          #2a2e31;
-$blue:          #2A5A98;
+$blue:          #306cdd;
 
 /*-----General styling-----*/
 $font-family-sans-serif: 'Maven Pro', sans-serif;
 
 /*-----Custom values for Bootstrap variables-----*/
 $link-decoration: none;
+$link-hover-decoration:  underline;
 $link-color: $blue;
 $h1-font-size: 1rem * 3 !default;

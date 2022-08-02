@@ -8,7 +8,6 @@ permalink: assets/css/main.css
 
 
 /*-----General styling-----*/
-
 main:not(.landingpage) {
     h1 {
         font-weight: 200;
@@ -31,15 +30,12 @@ main:not(.landingpage) {
         margin-top: $spacer * 1.5;
     }
 
-    a:not(.btn) {
-        overflow-wrap: break-word;
-        word-wrap: break-word;
-        -ms-word-break: break-all;
-        word-break: break-word;
-
-        &:hover {
-            text-decoration: underline;
-
+    a {
+        &:not(.btn) {
+            overflow-wrap: break-word;
+            word-wrap: break-word;
+            -ms-word-break: break-all;
+            word-break: break-word;
         }
     }
 
@@ -57,7 +53,6 @@ main:not(.landingpage) {
         @extend .img-fluid;
     }
 }
-
 
 /*-----Top navigation-----*/
 
@@ -86,6 +81,35 @@ main:not(.landingpage) {
     }
 }
 
+/*-----Home page-----*/
+
+
 .instances .card:hover {
     box-shadow: $box-shadow;
+}
+
+
+/*-----Species tree-----*/
+
+#species_tree_div {
+    overflow-x: scroll;
+    a {
+        fill: $primary;
+        text-decoration: $link-decoration;
+
+        &:hover {
+            fill: shift-color($primary, $link-shade-percentage);
+            text-decoration: $link-hover-decoration;
+        }
+
+        &.leafnode_link {
+            font-weight: 500;
+            font-size: smaller;
+        }
+
+        &.innernode_link {
+            font-size: x-small;
+        }
+
+    }
 }

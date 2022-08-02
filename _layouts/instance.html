@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="">
+    <title>{{page.title}}</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" type="text/css" href="{{'/assets/css/all.min.css' | relative_url}}">
+    <!-- Main css file -->
+    <link rel="stylesheet" href="{{'/assets/css/main.css' | relative_url}}">
+    <!-- Main font(s) -->
+    <link href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <!-- JavaScript  -->
+    <script src="{{'/assets/js/bootstrap.bundle.min.js' | relative_url}}"></script>
+    <script src="{{'/assets/js/main.js' | relative_url}}"></script>
+</head>
+
+<body>
+
+    <header>
+        {%- include first-nav.html %}
+        {%- if page.second-nav %}
+        {%- include second-nav.html %}
+        {%- endif %}
+        {%- if page.instance-nav %}
+        {%- include instance-nav.html %}
+        {%- endif %}
+    </header>
+    <div class="container min-vh-100">
+        <!-- Content Row -->
+        <div class="row gx-0 gx-lg-5">
+            <!-- Sidebar Column -->
+            <div class="col-lg-3">
+                <ul class="nav nav-pills flex-column p-3 bg-light rounded">
+                    <li class="nav-item">
+                      <a href="#" class="nav-link active" aria-current="page">
+                        Home
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" class="nav-link link-dark">
+                        Dashboard
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" class="nav-link link-dark">
+                        Orders
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" class="nav-link link-dark">
+                        Products
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" class="nav-link link-dark">
+                        Customers
+                      </a>
+                    </li>
+                  </ul>
+            </div>
+            <!-- Content Column -->
+            <div class="col-lg-9">
+                <main>
+                    {{content}}
+                </main>
+            </div>
+        </div>
+    </div>
+
+    {%- include footer.html %}
+</body>
+
+</html>
