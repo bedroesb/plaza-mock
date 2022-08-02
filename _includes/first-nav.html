@@ -31,7 +31,7 @@
                 </li>
                 
                 <li class="nav-item dropdown ms-0 ms-lg-3 mt-lg-1">
-                    <a class="nav-link btn btn-primary text-white dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false"><i class="fa-solid fa-pen me-2"></i>{% if page.instance %}{{page.instance}}{%- else %}Select instance{% endif %}</a>
+                    <a class="nav-link btn btn-primary text-white dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">{% if page.instance %}{{page.instance}}{%- else %}Select instance{% endif %}</a>
                     <ul class="dropdown-menu dropdown-menu-dark p-2 rounded-3 mx-0 border-0 shadow">
                         <li><a class="dropdown-item rounded {% if page.url == '/dictots_5' %}active{% endif %}" href="{{'/dictots_5' | relative_url}}">Dicots PLAZA 5.0</a></li>
                         <li><a class="dropdown-item rounded" href="#">Monocots PLAZA 5.0 </a></li>
