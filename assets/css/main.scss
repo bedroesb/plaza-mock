@@ -9,7 +9,28 @@ permalink: assets/css/main.css
 
 /*-----General styling-----*/
 
-main {
+main:not(.landingpage) {
+    h1 {
+        font-weight: 200;
+        margin-bottom: $spacer * 1.5;
+    }
+
+    h2 {
+        font-weight: 600;
+        color: $primary;
+        margin-top: $spacer * 1.5;
+    }
+
+    h3 {
+        font-weight: 600;
+    }
+
+    h4 {
+        font-weight: 600;
+        color: $secondary;
+        margin-top: $spacer * 1.5;
+    }
+
     a:not(.btn) {
         overflow-wrap: break-word;
         word-wrap: break-word;

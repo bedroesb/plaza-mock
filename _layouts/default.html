@@ -30,7 +30,7 @@
         {%- endif  %}
     </header>
 
-    <main class="container min-vh-100">
+    <main class="container min-vh-100 {% if page.url == '/' %}landingpage{% endif %}">
         {{content}}
     </main>
     {%- include footer.html %}

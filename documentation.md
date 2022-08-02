@@ -65,7 +65,7 @@ Please cite one of the following papers to reference the PLAZA project, dependin
 *   **Van de Velde, J.**, **Van Bel, M.**, **Vaneechoutte, D.**, **Vandepoele, K.** (2016) A Collection of Conserved Non-Coding Sequences to Study Gene Regulation in Flowering Plants [Plant Physiol. 171(4):2586-98](http://www.plantphysiol.org/content/171/4/2586.long)
 *   **Osuna-Cruz, C. M.**, **Bilcke, G.**, **Vancaester, E.**, **De Decker, S.**, **Bones, A.**, **Winge, P.**, **Poulsen, N.**, **Bulankova, P.**, **Verhelst, B.**, **Audoor, S.**, **Belisova, D.**, **Pargana, A.**, **Russo, M.**, **Stock, F.**, **Cirri, E.**, **Brembu, T.**, **Pohnert, G.**, **Piganeau, G.**, **Immacolata, M.**, **Mock, T.**, **Sterck, L.**, **Sabbe, K.**, **De Veylder, L.**, **\* Vyverman, W.**, **\* Vandepoele, K.** (2020) The Seminavis robusta genome provides insights into the evolutionary adaptations of benthic diatoms [Nature Communications](https://doi.org/10.1038/s41467-020-17191-8) \*contributed equally
 
-### Training Material
+## Training Material
 
 *   [PLAZA ELIXIR Workshop 2021](https://ftp.psb.ugent.be/pub/plaza/workshop/ELIXIR/2021/)
 *   [PLAZA ELIXIR Workshop 2019](https://ftp.psb.ugent.be/pub/plaza/workshop/ELIXIR/2019/)

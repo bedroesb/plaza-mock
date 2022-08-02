@@ -1,5 +1,6 @@
 ---
 title: Documentation
+first-nav: /documentation/
 second-nav:
     - title: Getting started
       url: /documentation/
