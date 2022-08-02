@@ -1,0 +1,21 @@
+--- 
+layout: none 
+permalink: assets/css/main.css 
+--- 
+
+@import "bootstrap_variables";
+@import "bootstrap/bootstrap";
+
+
+.navbar-nav .nav-item>a {
+
+    &.active,
+    &:hover {
+        border-bottom: 4px solid $primary;
+        margin-bottom: -4px;
+    }
+}
+
+.instances .card:hover {
+    box-shadow: $box-shadow;
+}

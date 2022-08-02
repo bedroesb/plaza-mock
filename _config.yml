@@ -1,0 +1,25 @@
+title: ELIXIR toolkit theme
+# This appears in the html browser tab for the site title (seen mostly by search engines, not users)
+
+exclude:
+  - .gitignore
+  - var/
+  - vendor
+  - Gemfile*
+  - LICENSE
+
+
+defaults:
+  -
+    scope:
+      path: ""
+      type: "pages"
+    values:
+      permalink: /:basename
+      layout: "page"
+
+plugins:
+  - jemoji
+  - jekyll-sitemap
+  - jekyll-github-metadata
+  - webrick
