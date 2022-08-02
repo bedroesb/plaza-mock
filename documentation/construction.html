@@ -1,0 +1,257 @@
+---
+title: Construction
+second-nav:
+    - title: Getting started
+      url: /documentation/
+    - title: Data Content
+      url: /documentation/data_content/
+    - title: Construction
+      url: /documentation/construction/
+    - title: Tools
+      url: /documentation/tools/
+    - title: API
+      url: /documentation/api/
+    - title: Data warehouse
+      url: /documentation/data_warehouse/
+    - title: Tutorials
+      url: /documentation/tutorials/
+    - title: FAQ
+      url: /documentation/faq/
+    - title: Glassary
+      url: /documentation/glossary/
+    - title: Links
+      url: /documentation/links/
+---
+
+  <h1>Construction</h1>
+  
+  <!-- ################################################################################################################ -->
+  <!--  workflow -->
+  <div class="doku_information doku_v_all" style="display: block;">
+    <h2>Workflow</h2>
+    <div class="doku_information doku_v_1 doku_v_2 doku_v_3 doku_v_4" style="display: none;">
+      <div style="width:95%;float:center;margin:30px;margin-left:100px;">
+        <p>
+          <a href="https://bioinformatics.psb.ugent.be/plaza//img/doku/flowchart_2_5.png"><img src="https://bioinformatics.psb.ugent.be/plaza/img/doku/flowchart_2_5.png" alt="" width="900"></a>				</p><div class="thumbcaption">(Click on the image to view full size)</div>
+        <p></p>
+       </div>
+      <p>
+        <strong>
+          Flowchart of the different steps used to build the PLAZA platform.
+          Grey boxes represent methods &amp; tools whereas white shadowed boxes refer to website visualization tools (most stored under the Analyze menu).
+        </strong>
+        A brief description of some essential construction steps is given below while program settings can be found <a href="https://bioinformatics.psb.ugent.be/plaza/documentation/construction_settings">here</a>.
+        For a more detailed explanation, please refer to the <a href="http://bioinformatics.psb.ugent.be/plaza/pages/publications" class="urlextern">PLAZA publications</a>.
+      </p>
+      <br>
+    </div>
+  
+    <div class="doku_information doku_v_5" style="display: block;">
+      <div style="width:95%;float:center;margin:30px;margin-left:85px;">
+        <p>
+          <a href="https://bioinformatics.psb.ugent.be/plaza//img/doku/flowchart_5.png"><img src="https://bioinformatics.psb.ugent.be/plaza/img/doku/flowchart_5.png" alt="" width="1000"></a>				</p><div class="thumbcaption">(Click on the image to view full size)</div>
+        <p></p>
+       </div>
+      <p>
+        <strong>
+          Flowchart of the different steps used to build the PLAZA platform.
+          Grey boxes represent methods &amp; tools whereas white shadowed boxes refer to website visualization tools (most stored under the Analyze menu).
+        </strong>
+        A brief description of some essential construction steps is given below while program settings can be found <a href="https://bioinformatics.psb.ugent.be/plaza/documentation/construction_settings">here</a>.
+        For a more detailed explanation, please refer to the <a href="http://bioinformatics.psb.ugent.be/plaza/pages/publications" class="urlextern">PLAZA publications</a>.
+      </p>
+      <br>
+    </div>
+  </div>
+  
+  <!-- ################################################################################################################ -->
+  <!--  workflow -->
+  <div class="doku_information doku_v_all" style="display: block;">
+    <h2>Annotation</h2>
+    <div class="doku_information doku_v_all" style="display: block;">
+      <ul class="doku_information doku_v_1 doku_v_2" style="display: none;">
+        <li>
+          Processing gene annotation &amp; alternative splicing: PLAZA uses a simplified annotation based on a 'one locus - one transcript' principle.
+          In case multiple splice variants of a single gene are known only the longest transcript is stored.
+          In the genome browsers (<a href="https://bioinformatics.psb.ugent.be/plaza/documentation/tools#annoj">AnnoJ</a> and <a href="https://bioinformatics.psb.ugent.be/plaza/documentation/tools#genomeview">GenomeView</a>) alternative transcripts can be explored.
+        </li>
+      </ul>
+      <ul class="doku_information doku_v_3" style="display: none;">
+        <li>
+          Processing gene annotation &amp; alternative splicing: PLAZA uses a simplified annotation based on a 'one locus - one transcript' principle.
+          In case multiple splice variants of a single gene are known only the longest transcript is stored.
+          In the genome browser (<a href="https://bioinformatics.psb.ugent.be/plaza/documentation/tools#genomeview">GenomeView</a>) alternative transcripts can be explored.
+        </li>
+      </ul>
+      <ul class="doku_information doku_v_4+" style="display: block;">
+        <li>
+          Processing gene annotation &amp; alternative splicing: PLAZA uses a simplified annotation based on a 'one locus - one transcript' principle.
+          In case multiple splice variants of a single gene are known only the longest transcript is stored.
+          In the genome browser (<a href="https://bioinformatics.psb.ugent.be/plaza/documentation/tools#igv">IGV.js</a>) alternative transcripts can be explored.
+        </li>
+      </ul>
+  
+      <ul class="doku_information doku_v_all" style="display: block;">
+        <li>
+          Erroneous gene models: When parsing all structural gene annotation, we verify if the original gene coordinates do generate the correct transcript and protein sequence (as reported by the primary data <a href="https://bioinformatics.psb.ugent.be/plaza/documentation/data_content#primary_gene_annotation">provider</a>).
+          Unfortunately, in some cases gene models yield an incorrect transcript (transcript=ne) or protein (protein=ne), sometimes including in-frame stopcodons as well.
+          Consequently, we have chosen to not process these proteins as their inclusion might cause issues further downstream in the PLAZA pipeline.
+          Although these invalid protein sequences are not present in PLAZA's protein database, the corresponding transcript sequences can still be explored using the BLAST page, using BLASTN.
+          <span class="doku_information doku_v_1" style="display: none;">
+            Additionally we do provide, if possible, some information about the genes present in PLAZA showing sequence similarity with the corrupt protein sequence (see Comment entry 'Truncated protein similar to').
+          </span>
+        </li>
+      </ul>
+  
+      <ul class="doku_information doku_v_1 doku_v_2 doku_v_3" style="display: none;">
+        <li>
+          Pseudo-chromosomes: Some genomes are not completely assembled into chromosomes and still contain many scaffolds.
+          Genes annotated on these unassigned scaffolds have a gene ID based on their position in an artificial concatenated chromosome 00 (eg. PT00G01010).
+          On the Gene overview page the original scaffold name can be found.
+        </li>
+      </ul>
+  
+      <ul class="doku_information doku_v_all" style="display: block;">
+        <li>
+          GO projection:
+          <ul class="doku_information doku_v_all" style="display: block;">
+            <li>
+              We applied a stringent set of rules to identify, based on the phylogenetic trees, sets of orthologous groups and used GO projection to exchange functional annotation between orthologs.
+              For the GO projection all primary gene annotations Inferred from Electronic Annotation (IEA) were excluded as primary information source.
+              All new gene-GO associations inferred through projection are labeled with evidence tag Inferred from Sequence Orthology (<abbr title="International Organization for Standardization">ISO</abbr>).
+              For newly inferred gene annotations the source gene(s) are stored as well.
+            </li>
+          </ul>
+          <ul class="doku_information doku_v_3 doku_v_4+" style="display: block;">
+            <li>
+              Additional orthologous relationships, used to transfer GO terms, were defined using the <a href="https://bioinformatics.psb.ugent.be/plaza/documentation/data_content">PLAZA Integrative Orthology Method</a>.
+            </li>
+          </ul>
+          <ul class="doku_information doku_v_3 doku_v_4+" style="display: block;">
+            <li>
+              GO projection is also performed using much less strict homology definitions. The end-user has the option, through the website, to select/deselect the information collected using GO transfer through sequence-based homology identification.
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+  
+  
+  <!-- ################################################################################################################ -->
+  <!-- gene family evolution -->
+  <div class="doku_information doku_v_all" style="display: block;">
+    <h2>Gene family evolution</h2>
+    <!-- start prot clustering -->
+    <ul class="doku_information doku_v_1 doku_v_2 doku_v_3" style="display: none;">
+      <li>
+        Protein clustering: All protein-coding genes were used to construct homologous gene families by applying sequence based protein clustering (<a href="https://bioinformatics.psb.ugent.be/plaza/documentation/construction_settings#blast">BLASTP</a> combined with <a href="https://bioinformatics.psb.ugent.be/plaza/documentation/construction_settings#tribe-mcl">Tribe-MCL</a> (homologous families) &amp; <a href="https://bioinformatics.psb.ugent.be/plaza/documentation/construction_settings#orthomcl">OrthoMCL</a> (sub-families)).
+        The Similarity heatmap tool can be used to view the BLASTP bit-scores between all members in a cluster.
+        This way the quality of the protein clustering can be inspected and can subgroups be detected.
+      </li>
+    </ul>
+    <ul class="doku_information doku_v_4+" style="display: block;">
+      <li>
+        Protein clustering: All protein-coding genes were used to construct homologous gene families by applying sequence based protein clustering (<a href="https://bioinformatics.psb.ugent.be/plaza/documentation/construction_settings#diamond">DIAMOND</a> combined with <a href="https://bioinformatics.psb.ugent.be/plaza/documentation/construction_settings#tribe-mcl">Tribe-MCL</a> (homologous families) &amp; <a href="https://bioinformatics.psb.ugent.be/plaza/documentation/construction_settings#orthofinder">OrthoFinder</a> (sub-families)).
+        The Similarity heatmap tool can be used to view the BLASTP bit-scores between all members in a cluster.
+        This way the quality of the protein clustering can be inspected and can subgroups be detected.
+      </li>
+    </ul>
+    <!-- end prot clustering -->
+  
+    <!-- start MSA -->
+    <ul class="doku_information doku_v_1 doku_v_2 doku_v_3" style="display: none;">
+      <li>
+        Multiple Alignments: For all gene families multiple sequence alignments were created using <a href="https://bioinformatics.psb.ugent.be/plaza/documentation/construction_settings#muscle">MUSCLE</a>.
+        <a href="https://bioinformatics.psb.ugent.be/plaza/documentation/construction_settings#jalview">Jalview</a> can be started on the website (webstart, no installation is required) to view alignments or export sequence data to your local PC.
+        <a href="https://bioinformatics.psb.ugent.be/plaza/documentation/construction_settings#jalview">Jalview</a> also includes some basic tools to create phylogenetic trees.
+      </li>
+    </ul>
+    <ul class="doku_information doku_v_4" style="display: none;">
+      <li>
+        Multiple Alignments: For all gene families multiple sequence alignments were created using <a href="https://bioinformatics.psb.ugent.be/plaza/documentation/construction_settings#muscle">MUSCLE</a>.
+        <a href="https://bioinformatics.psb.ugent.be/plaza/documentation/construction_settings#msaviewer">MSAViewer</a> can be started on the website to view alignments or export sequence data to your local PC.
+      </li>
+    </ul>
+    <ul class="doku_information doku_v_5" style="display: block;">
+      <li>
+        Multiple Alignments: For all gene families multiple sequence alignments were created using <a href="https://bioinformatics.psb.ugent.be/plaza/documentation/construction_settings#mafft">MAFFT</a>.
+        <a href="https://bioinformatics.psb.ugent.be/plaza/documentation/construction_settings#msaviewer">MSAViewer</a> can be started on the website to view alignments or export sequence data to your local PC.
+      </li>
+    </ul>
+    <!-- end MSA -->
+  
+    <!-- start tree -->
+    <ul class="doku_information doku_v_1 doku_v_2" style="display: none;">
+      <li>
+        Tree Inference: Phylogenetic trees were constructed using <a href="https://bioinformatics.psb.ugent.be/plaza/documentation/construction_settings#phyml">PhyML</a>.
+        <a href="https://bioinformatics.psb.ugent.be/plaza/documentation/construction_settings#notung">Notung 2.6</a> was used to root the trees and to infer speciation and duplication events using the tree reconciliation mode and applying the Duplication/Loss Score to evaluate alternate hypotheses).
+        <a href="https://bioinformatics.psb.ugent.be/plaza/documentation/construction_settings#archaeopteryx">Archaeopteryx</a> was used for tree visualization.
+      </li>
+    </ul>
+    <ul class="doku_information doku_v_3" style="display: none;">
+      <li>
+        Tree Inference: Phylogenetic trees were constructed using <a href="https://bioinformatics.psb.ugent.be/plaza/documentation/construction_settings#fasttree">FastTree</a>.
+        <a href="https://bioinformatics.psb.ugent.be/plaza/documentation/construction_settings#notung">Notung 2.6</a> was used to root the trees and to infer speciation and duplication events using the tree reconciliation mode and applying the Duplication/Loss Score to evaluate alternate hypotheses).
+        <a href="https://bioinformatics.psb.ugent.be/plaza/documentation/construction_settings#archaeopteryx">Archaeopteryx</a> was used for tree visualization.
+      </li>
+    </ul>
+    <ul class="doku_information doku_v_4+" style="display: block;">
+      <li>
+        Tree Inference: Phylogenetic trees were constructed using <a href="https://bioinformatics.psb.ugent.be/plaza/documentation/construction_settings#fasttree">FastTree</a>.
+        <a href="https://bioinformatics.psb.ugent.be/plaza/documentation/construction_settings#notung">Notung 2.6</a> was used to root the trees and to infer speciation and duplication events using the tree reconciliation mode and applying the Duplication/Loss Score to evaluate alternate hypotheses).
+        <a href="https://bioinformatics.psb.ugent.be/plaza/documentation/construction_settings#phyd3">PhyD3</a> was used for tree visualization.
+      </li>
+    </ul>
+    <!-- end tree -->
+  </div>
+  
+  
+  <!-- ################################################################################################################ -->
+  <!-- genome evolution -->
+  <div class="doku_information doku_v_all" style="display: block;">
+    <h2>Genome evolution</h2>
+    <ul class="doku_information doku_v_all" style="display: block;">
+      <li>
+        <a href="https://bioinformatics.psb.ugent.be/plaza/documentation/glossary#c">Colinearity</a> within and between species was identified using <a href="https://bioinformatics.psb.ugent.be/plaza/documentation/construction_settings#i-adhore">i-ADHoRe</a>.
+        This software package detects genomic homology based on the identification of conservation of gene content and gene order.
+      </li>
+      <li>
+        Ks-based dating: <a href="https://bioinformatics.psb.ugent.be/plaza/documentation/construction_settings#paml">PAML</a> was used to date colinear gene pairs based on aligned coding sequences (<a href="https://bioinformatics.psb.ugent.be/plaza/documentation/construction_settings#clustalw">CLUSTALW</a>).
+        Ks values are used to color multiplicons in the WGDotplot based on their age and a distribution is shown to discriminate multiple duplications.
+        The Ks tool allows a user to compare these distributions of several organisms.
+      </li>
+    </ul>
+  </div>
+  
+  
+  <!-- ################################################################################################################ -->
+  <!-- workbench -->
+  <div class="doku_information doku_v_all" style="display: block;">
+    <h2>Workbench</h2>
+    <ul class="doku_information doku_v_all" style="display: block;">
+      <li>
+        Toolkit included in PLAZA that allows researchers to perform analyses on user-defined gene sets.
+      </li>
+      <li>
+        Several types of statistics are determined and stored in the database for fast retrieval.
+        See <a href="https://bioinformatics.psb.ugent.be/plaza/documentation/tools#workbench">Tools-&gt;Workbench</a> for an overview.
+      </li>
+      <li>
+        The <a href="https://bioinformatics.psb.ugent.be/plaza/documentation/tools#go_enrichment">GO enrichment tool</a> can be applied to determine over- or under-represented functional annotations.
+      </li>
+    </ul>
+  </div>
+  
+  
+  <!-- ################################################################################################################ -->
+  <!-- tools and parameter settings -->
+  <div class="doku_information doku_v_all" style="display: block;">
+     <br>
+    <h2>Tools and parameter settings</h2>
+    <ul>
+      <li>
+        For an overview of all tools and parameter settings used in PLAZA, please visit <a href="https://bioinformatics.psb.ugent.be/plaza/documentation/construction_settings">this page</a>.
+      </li>
+    </ul>
+  </div>

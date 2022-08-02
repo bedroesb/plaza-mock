@@ -31,7 +31,7 @@ Data Content
 Primary gene annotation
 -----------------------
 
-[![](https://bioinformatics.psb.ugent.be/plaza/img/doku/data_overview_dicots04.png)](https://bioinformatics.psb.ugent.be/plaza//img/doku/data_overview_dicots04.png)
+[![](https://bioinformatics.psb.ugent.be/plaza/img/doku/data_overview_dicots04.png){: height="400px" width="400px"}](https://bioinformatics.psb.ugent.be/plaza//img/doku/data_overview_dicots04.png)
 
 Data Overview PLAZA Dicots 4.0
 

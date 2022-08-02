@@ -1,0 +1,1409 @@
+---
+title: Tools
+second-nav:
+    - title: Getting started
+      url: /documentation/
+    - title: Data Content
+      url: /documentation/data_content/
+    - title: Construction
+      url: /documentation/construction/
+    - title: Tools
+      url: /documentation/tools/
+    - title: API
+      url: /documentation/api/
+    - title: Data warehouse
+      url: /documentation/data_warehouse/
+    - title: Tutorials
+      url: /documentation/tutorials/
+    - title: FAQ
+      url: /documentation/faq/
+    - title: Glassary
+      url: /documentation/glossary/
+    - title: Links
+      url: /documentation/links/
+---
+
+<h1>Tools</h1>
+
+<div class="doku_information doku_v_all" style="display: block;">
+	<p>
+		<strong>
+			For a navigation overview of the different tools and how to reach them, click <a href="https://bioinformatics.psb.ugent.be/plaza/documentation/intro_tutorial#navigation_table_tools">here</a>.
+		</strong>
+	</p>
+</div>
+
+<!-- ################################################################################################################ -->
+<!-- gene family evolution -->
+<div class="doku_information doku_v_all" style="display: block;">
+	<h2 id="gene_family_evolution">Gene family evolution</h2>
+
+	<!-- start expansion plot -->
+	<div class="doku_information doku_v_3+" style="display: block;">
+		<h3 id="expansion_plot">Expansion plot</h3>
+		<div style="width:20%;float:left;margin:20px;">
+			<div class="thumb2 trien" style="width:180px;">
+				<div class="thumbinner">
+					<a href="https://bioinformatics.psb.ugent.be/plaza//img/doku/density_plot_gma_vvi.png"><img src="https://bioinformatics.psb.ugent.be/plaza/img/doku/density_plot_gma_vvi.png" alt="" width="170"></a>					<div class="thumbcaption">Expansion plot between Glycine max and Vitis vinifera, clearly identifying the recent WGD in soybean.</div>
+				</div>
+			</div>
+		</div>
+		<div style="width:20%;float:left;margin:20px;">
+			<div class="thumb2 trien" style="width:180px;">
+				<div class="thumbinner">
+					<a href="https://bioinformatics.psb.ugent.be/plaza//img/doku/density_plot_dicot_monocot.png"><img src="https://bioinformatics.psb.ugent.be/plaza/img/doku/density_plot_dicot_monocot.png" alt="" width="170"></a>					<div class="thumbcaption">Expansion plot between all dicot species and monocot species.</div>
+				</div>
+			</div>
+		</div>
+		<div style="float:left;width:50%;">
+			<ul>
+				<li>
+					Tool to explore the copy-number gene family variation between two groups of species.
+				</li>
+				<li>
+					Easily detect gene family expansions between two groups of organisms (each group contains one or more organisms).
+					Thus it is easy to explore gene families with a large copy number in one phylogenetic clade compared to another phylogenetic clade.
+					For each small square in the expansion plot, there is a corresponding copy number in organism group 1 (X-axis) and a corresponding copy number in organism group 2 (Y-Axis), respectively.
+					The color of the square indicates how many gene families in PLAZA have those copy numbers in organism group 1 and 2 (see legend on figure).
+					As such, squares with a large X-value and a low Y-value are expanded gene families in organism group 1, while squares with a large Y-Value and a low X-value represent expanded gene families in organism group 2.
+					Squares situated around the diagonal can be considered not to be expanded.
+				</li>
+			</ul>
+		</div>
+		<div style="clear:both;width:100%;">&nbsp;</div>
+		<div style="width:40%;float:right;margin:20px;">
+			<div class="thumb2 tright" style="width:360px;">
+				<div class="thumbinner">
+					<a href="https://bioinformatics.psb.ugent.be/plaza//img/doku/density_plot_gf.png"><img src="https://bioinformatics.psb.ugent.be/plaza/img/doku/density_plot_gf.png" alt="" width="350"></a>					<div class="thumbcaption"> Resulting page after clicking on the Glycine-Vitis expansion plot, selecting gene families with a higher copy number in Glyce max than in Vitis vinifera</div>
+				</div>
+			</div>
+		</div>
+		<div style="float:left;width:50%;">
+			<p>
+				All squares on the expansion plot are clickable and redirect to a table with the selected gene families.
+				As such, it is easy for the user to have a closer look at the gene families of interest.
+				<br>
+				This tool can be considered to be complementary to the Gene Family Finder Tool.
+			</p>
+			<ul>
+				<li>
+					<span>Parameters:</span>
+					<ul>
+						<li>
+							<em class="u">Maximum drawing size</em>:
+							Gene families with a too large copy number in either organisms group 1 or 2, are displayed on the outer border of the Expansion Plot.
+							By increasing the maximum drawing size the range of axes is increased, leading to a decreasing number of squares on the border.
+						</li>
+						<li>
+							<em class="u">Normalize by number of selected species</em>:
+							When there is more than 1 species in either organism group 1 or 2, it becomes clear that comparing gene families purely on copy number introduces a bias towards the group with more organisms.
+							Therefore the gene family copy number of the organism groups can be adapted so it averages over the number of species in that group.
+						</li>
+						<li>
+							<em class="u">Use only gene families where the selected species are all present</em>:
+							If selected, only those gene families, which have a representative gene of <strong>each</strong> organism of both groups, will be displayed.
+							Otherwise a single representative gene from each group will suffice to include the gene family.
+							Selection of this option will result in a smaller set of gene families.
+						</li>
+						<li>
+							<em class="u">Use only gene families specific to the selected species</em>:
+							If selected, only those gene families which have <strong>only</strong> representative genes from the selected organisms, will be displayed.
+							Selection of this option will result in a smaller set of gene families.
+						</li>
+					</ul>
+				</li>
+				<li>
+					<strong>This tool can be found at <em>Analyze → Expansion plot</em></strong>.
+				</li>
+			</ul>
+		</div>
+		<div style="clear:both;width:100%;">&nbsp;</div>
+	</div>
+	<!-- end expansion plot -->
+
+	<!-- start gf expansion analysis tool -->
+	<div class="doku_information doku_v_3+" style="display: block;">
+		<h3 id="gene_family_expansion_analysis">Gene family expansion analysis</h3>
+		<ul>
+			<li>
+				This page provides an overview of how expanded the copy number of genes from each species are, within a gene family.
+			</li>
+			<li>
+				Using the same approach as the <a href="https://bioinformatics.psb.ugent.be/plaza/documentation/tools#gene_family_finder">Gene Family Finder tool</a> (Find species/clade-enriched gene families),
+				this page uses the ratio of the copy number of a species (within a gene family) compared to the overall proteome size to evaluate whether an expansion for that species has occurred.
+			</li>
+			<li>
+				This method works well for multi-copy gene families, but single-copy gene families (in which each species has only 1 ortholog) might be incorrectly interpreted, as the species with the smaller proteome size will automatically be indicated as being depleted within that gene family.
+			</li>
+			<li>
+				Expansions are indicated with a ratio higher than 1, depletions are indicated with a ratio between 0 and 1.
+				An adapted color-scheme makes it easy to compare expansions and depletions (light colors indicate minimal expansions/depletions, intense colors indicate heavy expansions/depletions).
+			</li>
+			<li>
+				<strong>This tool is accessible from each gene family page </strong>
+			</li>
+		</ul>
+	</div>
+	<!-- end gf expansion analysis tool -->
+
+	<!-- start gf finder tool analysis tool -->
+	<div class="doku_information doku_v_3+" style="display: block;">
+		<h3 id="gene_family_finder">Gene family finder</h3>
+		<ul>
+			<li>
+				This tool enables to identify (expanded) gene families specific to one or more species.
+			</li>
+			<li>
+				The Gene Family Finder tool consists of two separate search functions:
+				an option to find species/clade-specific gene families and an option to find species/clade-expanded gene families.
+			</li>
+		</ul>
+
+		<div class="doku_information doku_v_3+" style="padding-left: 30px; display: block;">
+			<h4 id="find_species-specific_gene_families">Find species-specific gene families</h4>
+			<div style="width:30%;float:right;">
+				<div class="thumb2 trien" style="width:310px;">
+					<div class="thumbinner">
+						<a href="https://bioinformatics.psb.ugent.be/plaza//img/doku/findgenefamily.png"><img src="https://bioinformatics.psb.ugent.be/plaza/img/doku/findgenefamily.png" alt="" width="300"></a>						<div class="thumbcaption">Species-specific Gene Family Finder</div>
+					</div>
+				</div>
+			</div>
+			<div style="width:65%;float:left;">
+				<ul>
+					<li>
+						The user has the ability to detect specific gene families based on phylogenetic profiles (presence or absence of a gene family in a species).
+						For each species, the user can decide to include that species in the search, or to ignore it.
+						<strong>It is important to make the distinction between setting the expected gene copy number for a species to zero or ignoring that species in the search.</strong>
+						When the species is included, the gene copy number for that species will be evaluated. If that species is ignored, the gene copy number for that species is not evaluated.
+						<ul>
+							<li>
+								For example: If a user wants to view only the <em>Arabidopsis thaliana</em> specific gene families,
+								then the <em>include</em> button for all species should be selected (together with value 0),
+								and only for <em>Arabidopsis thaliana</em> the equal sign (<em>=</em>) should be changed to the greater-than-sign (<em> &gt; </em>).
+								This way, the database will know to select only these gene families for which the gene number of each species is zero,
+								except for <em>Arabidopsis thaliana</em>.
+							</li>
+						</ul>
+					</li>
+					<li>
+						Clade-specific gene families can be found by manually selecting the species and their expected gene copy number,
+						or by using the drop-down selection menu including pre-defined clades.
+						Further options and refinements to the search are still possible at that time.
+					</li>
+				</ul>
+			</div>
+			<div style="clear:both;width:100%;">&nbsp;</div>
+		</div>
+
+		<div class="doku_information doku_v_3+" style="padding-left: 30px; display: block;">
+			<h4 id="find_species_clade-enriched_gene_families">Find species/clade-enriched gene families</h4>
+			<ul>
+				<li>
+					This tool allows the user to select one or more species, and find the gene families where the copy number for the selected species is higher than would be expected.
+					The expansion ratio denotes, for a specific species, the fraction of genes in a gene family over the fraction of proteins (for that species) in the total PLAZA proteome.
+				</li>
+				<li>
+					For example: the <em>Arabidopsis thaliana</em> proteome makes up 3.5% of the PLAZA 2.5 proteome.
+					A valid search for <em>Arabidopsis thaliana</em> expanded gene families could be one where the <em>Arabidopsis thaliana</em> gene copy number makes up 35% of the gene family size.
+					 In that case it could be said that said gene families are 10x enriched for <em>Arabidopsis thaliana</em>.
+				</li>
+				<li>
+					Options include selection of the expansion ratio (compared to full proteome set), and the minimum and maximum number of genes in the gene families.
+				</li>
+				<li>
+					<strong>Both tools can be found at <em>Analyze → Gene Family Finder</em> or from a species (or phylogenetic clade) page</strong>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<!-- end gf finder tool analysis tool -->
+
+	<!-- start integrative orthology tool -->
+	<div class="doku_information doku_v_2 doku_v_3 doku_v_4" style="display: none;">
+		<h3 id="integrative_orthology_viewer">Integrative orthology viewer</h3>
+		<div style="width:20%;float:left;margin:20px;">
+			<div class="thumb2 tright" style="width:160px">
+				<div class="thumbinner">
+					<a href="https://bioinformatics.psb.ugent.be/plaza//img/doku/explore_orthologs_data.png"><img src="https://bioinformatics.psb.ugent.be/plaza/img/doku/explore_orthologs_data.png" alt="" width="150"></a>					<div class="thumbcaption">Content view Integrative Orthology Viewer</div>
+				</div>
+			</div>
+		</div>
+		<div style="width:75%;float:right;">
+			<ul>
+				<li>
+					Tool to explore for a query gene the orthologous genes in other species using different <a href="https://bioinformatics.psb.ugent.be/plaza/documentation/data_content#orthologous_genes">evidences</a> for orthology.
+				</li>
+				<li>
+					The viewer displays for a query gene all orthologous genes (detected by the various methods),
+					with the support of the methods for each orthologous relationship displayed by the completeness of the polygon.
+					Also, the inparalogs of the query gene (and the orthologs of those inparalogs) are displayed as well,
+					in order to identify possible many-to-many orthologous relationships. The query gene is indicated by the black band in the Integrative Orthology Viewer.
+				</li>
+				<li>
+					Clicking on the polygon representing the support for the orthologous relationship gives the user the possibility to view the support for that orthologous relationship in an in-depth manner.
+				</li>
+				<li>
+					<strong>The Integrative Orthology Viewer can be accessed through a gene page </strong>
+				</li>
+			</ul>
+		</div>
+		<div style="clear:both;width:100%">&nbsp;</div>
+	</div>
+	<div class="doku_information doku_v_5" style="display: block;">
+		<h3 id="integrative_orthology_viewer">Integrative orthology viewer</h3>
+		<div style="width:20%;float:left;margin:20px;">
+			<div class="thumb2 tright" style="width:160px">
+				<div class="thumbinner">
+					<a href="https://bioinformatics.psb.ugent.be/plaza//img/doku/explore_orthologs_data_5.png"><img src="https://bioinformatics.psb.ugent.be/plaza/img/doku/explore_orthologs_data_5.png" alt="" width="150"></a>					<div class="thumbcaption">Content view Integrative Orthology Viewer</div>
+				</div>
+			</div>
+		</div>
+		<div style="width:75%;float:right;">
+			<ul>
+				<li>
+					Tool to explore for a query gene the orthologous genes in other species using different <a href="https://bioinformatics.psb.ugent.be/plaza/documentation/data_content#orthologous_genes">evidences</a> for orthology.
+				</li>
+				<li>
+					The viewer displays for a query gene all orthologous genes (detected by the various methods),
+					with the support of the methods for each orthologous relationship displayed by the completeness of the polygon.
+				</li>
+				<li>
+					For each relationship, the following gene sequence features are also compared: CDS length, number of exons and GC content. 
+					These are shown at the bottom of the polygon, displayed by pie charts.
+				</li>
+				<li>
+					The inparalogs of the query gene (and the orthologs of those inparalogs) are displayed as well,
+					in order to identify possible many-to-many orthologous relationships. 
+					The query gene is indicated by the black band in the Integrative Orthology Viewer.
+				</li>
+				<li>
+					Clicking on the polygon representing the support for the orthologous relationship gives the user the possibility to view the support for that orthologous relationship in an in-depth manner.
+				</li>
+				<li>
+					Drop-down menus allow the user to select which orthology approach and gene feature to display, but also how many approaches to include at the same time.
+				</li>
+				<li>
+					<strong>The Integrative Orthology Viewer can be accessed through a gene page </strong>
+				</li>
+			</ul>
+		</div>
+		<div style="clear:both;width:100%">&nbsp;</div>
+	</div>
+	<!-- end integrative orthology tool -->
+
+	<!-- start heatmap -->
+	<!-- heatmap is gf only for v1/v2 -->
+	<div class="doku_information doku_v_1 doku_v_2" style="display: none;">
+		<h3 id="similarity_heatmap">Similarity heatmap</h3>
+		<div style="width:20%;float:right;">
+			<div class="thumb2 trien" style="width:210px">
+				<div class="thumbinner">
+					<a href="https://bioinformatics.psb.ugent.be/plaza//img/doku/heatmap_hom000575.png"><img src="https://bioinformatics.psb.ugent.be/plaza/img/doku/heatmap_hom000575.png" alt="" width="200"></a>					<div class="thumbcaption">Heatmap of family <strong>HOM000575</strong> showing several sub-families </div>
+				</div>
+			</div>
+		</div>
+		<div style="width:75%;float:left;">
+			<ul>
+				<li>
+					The similarity heatmap visualizes the similarities (bitscores) between all genes within a family.
+				</li>
+				<li>
+					Use the heatmap to visualize similarities (bitscores) between all genes within one family, using different shades of green-white.
+					If a cell is pitch black the genes aren't BLAST hits (with our settings, see <a href="https://bioinformatics.psb.ugent.be/plaza/documentation/construction">Construction</a>).
+					Otherwhise the similarity is indicated by the color dark green is bad similarity and white is the highest similarity in the grid.
+					This can be usefull to check the clustering or to delineate sub-groups.
+					The genes are clustered using single linkage clustering to group similar genes in the heatmap together.
+					Gene ids and Ortho sub-family ids can be clicked and take you to the corresponding page on the website.
+					In case the heatmap is too large to display a slider is shown that allows users to shrink/enlager the heatmap.
+					Additionally a gene-by-gene normalization procedure can be turned on/off.
+				</li>
+				<li>
+					<strong>This tool can only be reached through a gene family page.</strong>
+				</li>
+			</ul>
+		</div>
+		<div style="clear:both;width:100%">&nbsp;</div>
+	</div>
+	<!-- end gf-only v1/v2 heatmap -->
+	<!-- start heatmap for v3 -->
+	<div class="doku_information doku_v_3" style="display: none;">
+		<h3 id="similarity_heatmap">Similarity heatmap</h3>
+		<div style="width:20%;float:right;">
+			<div class="thumb2 trien" style="width:210px">
+				<div class="thumbinner">
+					<a href="https://bioinformatics.psb.ugent.be/plaza//img/doku/heatmap_HOM03D002995.png"><img src="https://bioinformatics.psb.ugent.be/plaza/img/doku/heatmap_HOM03D002995.png" alt="" width="200"></a>					<div class="thumbcaption">Heatmap of family <strong>HOM03D002995</strong></div>
+				</div>
+			</div>
+		</div>
+		<div style="width:75%;float:left;">
+			<ul>
+				<li>
+					The similarity heatmap visualizes the similarities (bitscores) between all genes within a family.
+				</li>
+				<li>
+					Use the heatmap to visualize similarities (bitscores) between all genes within one family.
+					The colorization scale is displayed on top of the heatmap, with dark blue indicating little to no similarity, and red a high degree of similarity.
+					If the value is zero, then the genes aren't BLAST hits (with our settings, see <a href="https://bioinformatics.psb.ugent.be/plaza/documentation/construction">Construction</a>).
+					Extra information, such as subfamilies and outlier data, is displayed on the left.
+					Clustering and dendrogram creation is handled by the JavaScript visualization tool <a href="https://bioinformatics.psb.ugent.be/plaza/documentation/tools#canvasxpress">canvasXPress</a>.
+					Selection of species, as well as normalization, are new options compared to previous PLAZA versions.
+				</li>
+				<li>
+					<strong>This tool can only be reached through a gene family page.</strong>
+				</li>
+			</ul>
+		</div>
+		<div style="clear:both;width:100%">&nbsp;</div>
+	</div>
+	<!-- end heatmap for v3 -->
+	<!-- end heatmap -->
+
+	<!-- start tree-explorer -->
+	<!-- tree explorer v1-v3 -->
+	<div class="doku_information doku_v_1 doku_v_2 doku_v_3" style="display: none;">
+		<h3 id="tree_explorer">Tree explorer</h3>
+		<div style="width:20%;float:right;">
+			<div class="thumb2 tright" style="width:160px">
+				<div class="thumbinner">
+					<a href="https://bioinformatics.psb.ugent.be/plaza//img/doku/genefamily_tree.png"><img src="https://bioinformatics.psb.ugent.be/plaza/img/doku/genefamily_tree.png" alt="" width="150"></a>					<div class="thumbcaption">Example of a phylogenetic gene tree </div>
+				</div>
+			</div>
+		</div>
+		<div style="width:75%;float:left;">
+			<ul>
+				<li>
+					View the phylogenetic tree of the homologous gene family.
+				</li>
+				<li>
+					Using the Java applet version of Archaeoptryx trees are visualized and several features can displayed (speciation/duplication nodes, intron/exon structures and InterPro domains).
+					For more details, check the <a href="https://bioinformatics.psb.ugent.be/plaza/documentation/construction_settings">settings</a> page.
+				</li>
+				<li>
+					Due to the editing of the multiple sequence alignment prior tree construction,
+					some taxa showing too many gaps in the alignment or representing partial genes are discarded (cfr. 'Outlier/stripped gene information').
+				</li>
+				<li>
+					<strong>The Tree explorer can be accessed through a gene family page.</strong>
+				</li>
+			</ul>
+		</div>
+		<div style="clear:both;width:100%">&nbsp;</div>
+	</div>
+	<!-- tree explorer v4+ -->
+	<div class="doku_information doku_v_4+" style="display: block;">
+		<h3 id="tree_explorer">Tree explorer</h3>
+		<div style="width:20%;float:right;">
+			<div class="thumb2 tright" style="width:160px">
+				<div class="thumbinner">
+					<a href="https://bioinformatics.psb.ugent.be/plaza//img/doku/genefamily_tree_phyd3.png"><img src="https://bioinformatics.psb.ugent.be/plaza/img/doku/genefamily_tree_phyd3.png" alt="" width="150"></a>					<div class="thumbcaption">Example of a phylogenetic gene tree </div>
+				</div>
+			</div>
+		</div>
+		<div style="width:75%;float:left;">
+			<ul>
+				<li>
+					View the phylogenetic tree of the homologous gene family.
+				</li>
+				<li>
+					Using PhyD3 trees are visualized and several features can displayed (speciation/duplication nodes, intron/exon structures and InterPro domains).
+					For more details, check the corresponding <a href="https://academic.oup.com/bioinformatics/article-lookup/doi/10.1093/bioinformatics/btx324" 1="1">paper</a> .
+				</li>
+				<li>
+					Due to the editing of the multiple sequence alignment prior tree construction,
+					some taxa showing too many gaps in the alignment or representing partial genes are discarded (cfr. 'Outlier/stripped gene information').
+				</li>
+				<li>
+					<strong>The Tree explorer can be accessed through a gene family page.</strong>
+				</li>
+			</ul>
+		</div>
+		<div style="clear:both;width:100%">&nbsp;</div>
+	</div>
+	<!-- end tree-explorer -->
+
+	<!-- start interactive phylogenetics module -->
+	<div class="doku_information doku_v_4+" style="display: block;">
+		<h2 id="interactive_phylo">Interactive Phylogenetics Module</h2>
+		<div style="width:20%;float:right;">
+			<div class="thumb2 tright" style="width:160px">
+				<div class="thumbinner">
+					<a href="https://bioinformatics.psb.ugent.be/plaza//img/doku/Interactive_phylogenetic_module.png"><img src="https://bioinformatics.psb.ugent.be/plaza/img/doku/Interactive_phylogenetic_module.png" alt="" width="150"></a>					<div class="thumbcaption">Screenshot of the Interactive Phylogenetics Module </div>
+				</div>
+			</div>
+		</div>
+		<div style="width:75%;float:left;">
+			<ul>
+				<li>
+					The Interactive Phylogenetics Module is meant to generate the phylogenetic tree of user-selected sequences.
+				</li>
+				<li>
+					The user first inputs a seed gene or gene family identifier.
+				</li>
+				<li>
+					A selection has to be made of sequences to be analyzed based on the BLAST hits of the query gene OR species-based selection based on the corresponding gene family; only one of the selection modes can be used at the same time. 
+					Also external sequences (either DNA/protein sequences) can optionally be inputted. 
+				</li>
+				<li>
+					The algorithm used for generation of the MSA can be either MUSCLE or MAFFT using automatic method detection.
+					Next, the user can choose to perform no editing, removal of lowly conserved positions, filtering of partial sequences or both filtering and trimming.
+					Finally, the phylogenetic tree construction has to be defined, which can be either the approximate maximum likelihood FastTree or the maximum likelihood methods PhyML, RaXML, or IQ-TREE.
+					The latter will perform a test to detect the best fitting protein model from the following widely used models: JTT, LG, WAG, Blosum62, VT and Dayhoff.
+					Thousand rounds of ultraparametric bootstrapping are run in IQ-TREE and the FreeRate model is used for rate heterogeneity across sites.
+					All other methods use the WAG protein model in combination with 100 bootstraps and gamma approximation for modelling rate heterogeneity across sites.
+				</li>
+				<li>
+					PhyD3 is used to visualize the generated phylogenetic tree.
+					All intermediate and final files can be downloaded from the <em>Files</em> tab.
+					All used commands and software versions can be displayed and finally detailed information about alignment construction and processing is visible in the <em>Extra</em> tab.
+				</li>
+				<li>
+					<strong>The Tree explorer can be either accessed directly through <em>Analyze → Interactive Phylogenetics Module</em> or indirectly from a gene/gene family page.</strong>
+				</li>
+			</ul>
+		</div>
+		<div style="clear:both;width:100%">&nbsp;</div>
+	</div>
+	<!-- end interactive phylogenetics module -->
+</div>
+
+<!-- ################################################################################################################ -->
+<!-- general tools (v4+) -->
+<div class="doku_information doku_v_4+" style="display: block;">
+	<h2 id="general_tools">General tools</h2>
+
+	<!-- generalized heatmap -->
+	<div class="doku_information doku_v_4+" style="display: block;">
+		<h3 id="similarity_heatmap_general">Similarity heatmap</h3>
+		<div style="width:20%;float:right;">
+			<div class="thumb2 trien" style="width:210px">
+				<div class="thumbinner">
+					<a href="https://bioinformatics.psb.ugent.be/plaza//img/doku/heatmap_IPR006312.png"><img src="https://bioinformatics.psb.ugent.be/plaza/img/doku/heatmap_IPR006312.png" alt="" width="200"></a>					<div class="thumbcaption">Heatmap of InterPro domain IPR006312</div>
+				</div>
+			</div>
+		</div>
+		<div style="width:75%;float:left;">
+			<ul>
+				<li>
+					The similarity heatmap visualizes the similarities (bitscores) between all genes of a gene set.
+					This gene set can be either a gene family, InterPro domain, GO term, or workbench experiment.
+				</li>
+				<li>
+					Use the heatmap to visualize similarities (bitscores) between all the genes of the gene set.
+					The colorization scale is displayed on top of the heatmap, with dark blue indicating little to no similarity, and red a high degree of similarity.
+					If the value is zero, then the genes aren't BLAST hits (with our settings, see <a href="https://bioinformatics.psb.ugent.be/plaza/documentation/construction">Construction</a>).
+				</li>
+				<li>
+					Extra information, such as families, subfamilies and outlier data, are optionally displayed on the left.
+					Clustering and dendrogram creation is handled by the JavaScript visualization tool <a href="https://bioinformatics.psb.ugent.be/plaza/documentation/tools#canvasxpress">canvasXPress</a>.
+					Selection of species, as well as normalization of the bitscores, are additional options for the end-user.
+				</li>
+				<li>
+					<strong>This tool can only be reached through a gene family page, InterPro page, or GO page.</strong>
+				</li>
+			</ul>
+		</div>
+		<div style="clear:both;width:100%">&nbsp;</div>
+	</div>
+	<!-- end heatmap -->
+</div>
+
+
+<!-- ################################################################################################################ -->
+<!-- genome evolution -->
+<div class="doku_information doku_v_all" style="display: block;">
+	<h2 id="genome_evolution_and_colinearity_research">Genome evolution and colinearity research</h2>
+
+	<!-- start  circleplot -->
+	<div class="doku_information doku_v_2+" style="display: block;">
+		<h3 id="circle_plot">Circle Plot</h3>
+		<div style="width:20%;float:right;">
+			<div class="thumb2 tright" style="width:160px">
+				<div class="thumbinner">
+					<a href="https://bioinformatics.psb.ugent.be/plaza//img/doku/ath_circle2.png"><img src="https://bioinformatics.psb.ugent.be/plaza/img/doku/ath_circle2.png" alt="" width="150"></a>					<div class="thumbcaption">Circle Plot of Arabidopsis-Arabidopsis with only colinear regions from chromosome 5</div>
+				</div>
+			</div>
+		</div>
+		<div style="width:75%;float:left;">
+			<ul>
+				<li>
+					The Circle Plot reports all colinear regions within a single species using a circular representation.
+					This plot uses nucleotide-based coordinates instead of genes (as the smallest unit).
+				</li>
+				<li>
+					<span>
+						The data is the same as used for the WGDotplot (and thus generated using i-ADHoRe) while the tool is based on HTML5 canvas-drawing (with Javascript).
+						This allows for direct interaction with the visualization:
+					</span>
+					<ul>
+						<li>
+							Coloring options (either by Ks-value or by chromosome)
+						</li>
+						<li>
+							Selection of chromosomes, which is done by selecting chromosome/scaffolds in the section <i>Chromosome display selection</i>.
+							Colinear regions that start/stop at the selected chromosome will appear/disappear as well.
+						</li>
+						<li>
+							Selection of colinear regions, which is done by selecting chromosome/scaffolds in the section <i>Chromosome colinearity selection</i>.
+							When a chromosome is selected, then colinear regions starting/stopping in the chromosome will be displayed.
+							When a chromosome is not selected, then colinear regions starting/stopping the chromosome will not be displayed.
+							The associated figure shows for example the circleplot when all chromosomes (except 5) have not been selected.
+						</li>
+					</ul>
+				</li>
+				<li>
+					<span> Other options include:</span>
+					<ul>
+						<li>
+							The visualization of colinear regions with other organisms on the outer border of the Circle Plot, by selecting the <i>Add extra organisms</i> option.
+						</li>
+						<li>
+							The mapping of (coding) gene density on the outer border of the Circle Plot, making it easier to identify regions on the chromosome with low coding potential, such as centromeres.
+						</li>
+						<li>
+							The mapping of genes with a specific Gene Ontology (GO) term or InterPro domain on the outer border of the Circle Plot.
+							This can be used to identify whether certain genes are conserved within a colinear region.
+						</li>
+					</ul>
+				</li>
+				<li>
+					<strong>This tool can be found at <em>Analyze → WGDotplot</em></strong>
+				</li>
+			</ul>
+		</div>
+		<div style="clear:both;width:100%">&nbsp;</div>
+	</div>
+	<!-- end  circleplot -->
+
+	<!-- start gene duplication analysis -->
+	<div class="doku_information doku_v_2+" style="display: block;">
+		<h3 id="gene_duplication_analysis">Gene duplication analysis</h3>
+		<div style="width:30%;float:right;">
+			<div class="thumb2 trien" style="width:260px">
+				<div class="thumbinner">
+					<a href="https://bioinformatics.psb.ugent.be/plaza//img/doku/gene_duplication_analysis.png"><img src="https://bioinformatics.psb.ugent.be/plaza/img/doku/gene_duplication_analysis.png" alt="" width="250"></a>					<div class="thumbcaption">Gene duplication analysis graph for gene family HOM000382 in PLAZA 2.5. Clear display of Glycine Max (gma) recent WGD history (yellow bar).</div>
+				</div>
+			</div>
+		</div>
+		<div style="width:65%;float:left;">
+			<ul>
+				<li>
+					The Gene duplication analysis page displays for a given set of genes the fraction of block and tandem duplicates.
+				</li>
+				<li>
+					For a gene set (e.g. gene families, genes associated with GO terms or InterPro domains) the fraction which is determined to be duplicated (by either a tandem duplication event or a block duplication event/WGD) is reported.
+					This analysis is displayed in a bar-chart, with the various types of duplications indicated on the page, organized per species.
+					This is useful for examining the mode of duplication responsible for the expansions of gene copy number within a set of genes.
+				</li>
+				<li>
+					<strong> This tool can be reached through each gene family page, GO term page or InterPro page, through the summary of gene duplication types displayed below the pie-chart (with number copy per species) on each page. </strong>
+				</li>
+			</ul>
+		</div>
+		<div style="clear:both;width:100%">&nbsp;</div>
+	</div>
+	<!-- end gene duplication analysis -->
+
+	<!-- start ks graphs -->
+	<div class="doku_information doku_v_all" style="display: block;">
+		<h3 id="ks-graphs">Ks-graphs</h3>
+		<div style="width:30%;float:right;">
+			<div class="thumb2 tright" style="width:210px">
+				<div class="thumbinner">
+					<div class="doku_information doku_v_1 doku_v_2" style="display: none;">
+						<a href="https://bioinformatics.psb.ugent.be/plaza//img/doku/supplementary_image_2.png"><img src="https://bioinformatics.psb.ugent.be/plaza/img/doku/supplementary_image_2.png" alt="" width="200"></a>						<div class="thumbcaption">Comparison of Ks distributions between <em>Vitis</em>, papaya and poplar (warning: this visualization uses Flash)</div>
+					</div>
+					<div class="doku_information doku_v_3+" style="display: block;">
+						<a href="https://bioinformatics.psb.ugent.be/plaza//img/doku/ksgraph_javascript_ath_aly.png"><img src="https://bioinformatics.psb.ugent.be/plaza/img/doku/ksgraph_javascript_ath_aly.png" alt="" width="200"></a>						<div class="thumbcaption">Comparison of Ks distributions between Arabidopsis <em>thaliana</em> and Arabidopsis <em>lyrata</em></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div style="width:65%;float:left;">
+			<ul>
+				<li>
+					The Ks-graphs tool allows you to overlay several Ks graphs of colinear gene pairs.
+				</li>
+				<li>
+					This tool allows the user to plot histograms from Ks values for all colinear gene pairs within one species or from two species.
+					If selected, multiple graphs can be superimposed on each other.
+					The user is able to compare Ks values from duplication events in different organisms or Ks values from speciation events.
+				</li>
+				<li>
+					<strong>This tool can be found at <em>Analyze → Ks-graphs</em></strong>
+				</li>
+			</ul>
+		</div>
+		<div style="clear:both;width:100%">&nbsp;</div>
+	</div>
+	<!-- end ks graphs -->
+
+	<!-- start multiplicon view -->
+	<a id="multiplicon_view" name="multiplicon_view">
+	</a><div class="doku_information doku_v_1 doku_v_2 doku_v_3" style="display: none;"><a id="multiplicon_view" name="multiplicon_view">
+		<h3 class="sectionedit14">Multiplicon view</h3>
+		</a><div style="width:30%;float:right;"><a id="multiplicon_view" name="multiplicon_view">
+			</a><div class="thumb2 tright" style="width:210px"><a id="multiplicon_view" name="multiplicon_view">
+				</a><div class="thumbinner"><a id="multiplicon_view" name="multiplicon_view">
+					</a><a href="https://bioinformatics.psb.ugent.be/plaza//img/doku/multiplicon_monocotsv4_21353.png"><img src="https://bioinformatics.psb.ugent.be/plaza/img/doku/multiplicon_monocotsv4_21353.png" alt="" width="200"></a>					<div class="thumbcaption">Gene order alignment of 1 <em>Vitis vinifera</em> region with 4 matching <em>Populus trichocarpa</em> regions</div>
+				</div>
+			</div>
+		</div>
+		<div style="width:65%;float:left;">
+			<ul>
+				<li>
+					The Multiplicon view displays the aligned gene strings of a set of homologous segments.
+				</li>
+				<li>
+					Colinear segments detected by i-ADHoRe are grouped into multiplicons.
+					These are initially pairwise (level 2) but i-ADHoRe will iteratively go through the genomes adding, if available, extra homologous segments (profile search).
+					Below the image a list is shown with all multiplicons detected using a profile based on the current multiplicon.
+					These segments are aligned using i-ADHoRe's greedy graph aligner.
+				</li>
+				<li>
+					Clicking on a gene will allow the user to go directly to the gene page or the gene family page.
+				</li>
+				<li>
+					In the advanced options box on the right side of the page different window sizes can be selected.
+				</li>
+				<li>
+					<strong>This tool can be reached through the <em><a href="https://bioinformatics.psb.ugent.be/plaza/documentation/tools#wgdotplot">WGDotplot</a></em>
+					and the <em><a href="https://bioinformatics.psb.ugent.be/plaza/documentation/tools#skyline_plot">Skyline Plot</a></em>.</strong>
+				</li>
+			</ul>
+		</div>
+		<div style="clear:both;width:100%">&nbsp;</div>
+	</div>
+	<div class="doku_information doku_v_4+" style="display: block;">
+		<h3 class="sectionedit14">Multiplicon view</h3>
+		<div style="width:30%;float:right;">
+			<div class="thumb2 tright" style="width:210px">
+				<div class="thumbinner">
+					<a href="https://bioinformatics.psb.ugent.be/plaza//img/doku/multiplicon_v4_higher.png"><img src="https://bioinformatics.psb.ugent.be/plaza/img/doku/multiplicon_v4_higher.png" alt="" width="200"></a>					<div class="thumbcaption">Gene order alignment of various colinear segments</div>
+				</div>
+			</div>
+		</div>
+		<div style="width:65%;float:left;">
+			<ul>
+				<li>
+					The Multiplicon view displays the aligned gene strings of a set of homologous segments.
+				</li>
+				<li>
+					Colinear segments detected by i-ADHoRe are grouped into multiplicons.
+					These are initially pairwise (level 2) but i-ADHoRe will iteratively go through the genomes adding, if available, extra homologous segments (profile search).
+					Below the image a list is shown with all multiplicons detected using a profile based on the current multiplicon.
+					These segments are aligned using i-ADHoRe's greedy graph aligner.
+				</li>
+				<li>
+					<span>The visualization is fully JavaScript-driven, and allows for a variety of interactive options:</span>
+					<ul>
+						<li>Selection of species for which to display the colinear regions</li>
+						<li>Ordering of the colinear segments in the visualization</li>
+						<li>Whether or not to draw all genes, or only the colinear ones</li>
+					</ul>
+				</li>
+				<li>
+					Additionally, by clicking on a gene a variety of extra information is displayed,
+					with the necessary linkouts to allow the end-user to freely navigate the PLAZA platform to other entities of interest.
+				</li>
+				<li>
+					<strong>This tool can be reached through the <em><a href="https://bioinformatics.psb.ugent.be/plaza/documentation/tools#wgdotplot">WGDotplot</a></em>
+					and the <em><a href="https://bioinformatics.psb.ugent.be/plaza/documentation/tools#skyline_plot">Skyline Plot</a></em>.</strong>
+				</li>
+			</ul>
+		</div>
+		<div style="clear:both;width:100%">&nbsp;</div>
+	</div>
+	<!-- end multiplicon view -->
+
+	<!-- start skyline plot -->
+	<div class="doku_information doku_v_all" style="display: block;">
+		<h3 id="skyline_plot">Skyline plot</h3>
+		<div style="width:30%;float:right;">
+			<div class="thumb2 trien" style="width:210px">
+				<div class="thumbinner">
+					<a href="https://bioinformatics.psb.ugent.be/plaza//img/doku/plaza_image_skyline.png"><img src="https://bioinformatics.psb.ugent.be/plaza/img/doku/plaza_image_skyline.png" alt="" width="200"></a>					<div class="thumbcaption">Skyline plot around <strong>PT10G16600</strong></div>
+				</div>
+			</div>
+		</div>
+		<div style="width:65%;float:left;">
+			<ul>
+				<li>
+					The Skyline plot provides for a locus of interest an overview of the <a href="https://bioinformatics.psb.ugent.be/plaza/documentation/data_content#colinearity_information">colinear regions</a> within and between species.
+				</li>
+				<li>
+					Starting from a query locus, the Skyline plot gives an overview of the colinear regions that exist within a set of selected species, i.e. regions between the selected species which have conserved gene content and order.
+					This region is selected using a reference gene that should always be entered.
+					Selection of only the organism for which the query locus was entered will provide an overview of the duplicated blocks overlapping with the query locus, while selecting other species as well will report all colinear regions.
+					The plot will find all multiplicons that match the reference chromosome, and will check for each organism how many segments can be found together with the reference segments in one multiplicon.
+					Each block is clickable and will take you to the multiplicon view.
+				</li>
+				<li>
+					This plot can thus be used to study the number of identifiable duplications in the evolutionary history of organisms.
+					The example Skyline Plot image for example details a maximum of six colinear poplar segments versus three Arabidopsis thaliana segments.
+					When studying the Skyline plots on a per-chromosome basis between species the number of duplication events can as such be measured.
+				</li>
+				<li>
+					Advanced options include the window size and the experiment (i.e. i-ADHoRe settings and selected species to identify gene colinearity).
+					The window size makes it possible to report colinearity for only a small region around the query locus (50, 100, 200 or 500 genes) or for the entire chromosome (chromosome).
+					The experiment selection makes it possible to use the output of specific i-ADHoRe runs (i.e. the method used to detect gene colinearity).
+				</li>
+				<li>
+					 Note that different segments in the same stack (i.e. on top of each other) can point to different multiplicons (from different species).
+				</li>
+				<li>
+					Clicking on a region in the Skyline plot will redirect the user to the associated <a href="#multiplicon_view">Multiplicon view</a>, where the genes in the colinear region are detailled. 
+				</li>
+				<li>
+					 <strong>This tool can be found at <em>Analyze → Skyline plot</em></strong>
+				</li>
+			</ul>
+		</div>
+		<div style="clear:both;width:100%">&nbsp;</div>
+	</div>
+	<!-- end skyline plot -->
+
+	<!-- start synteny plot -->
+	<div class="doku_information doku_v_1 doku_v_2" style="display: none;">
+		<h3 id="synteny_plot">Synteny plot</h3>
+		<div style="width:30%;float:right;">
+			<div class="thumb2 tright" style="width:210px">
+				<div class="thumbinner">
+					<a href="https://bioinformatics.psb.ugent.be/plaza//img/doku/synteny_hom000704_5_0_50.png"><img src="https://bioinformatics.psb.ugent.be/plaza/img/doku/synteny_hom000704_5_0_50.png" alt="" width="200"></a>					<div class="thumbcaption">Partial Synteny plot from gene family <strong>HOM000704</strong></div>
+				</div>
+			</div>
+		</div>
+		<div style="width:65%;float:left;">
+			<ul>
+				<li>
+					The Synteny plot reports the local gene organization for homologous genes within a family.
+				</li>
+				<li>
+					Starting from a selected family the gene organization of all homologs of that family is reported.
+					Strand information and different gene types are indicated by arrows and other symbols (see Legend), respectively, and genes belonging to the same gene family are coded by the same color.
+					All genes are drawn in the picture as if lying on the forward strand, which is done for easier visual comparison.
+				</li>
+				<li>
+					The window size option makes it possible to change the number of genes around the locus from the selected gene family (5, 10 or 15 genes).
+					The paginate function (right option menu) can be used to view additional genes  associated with this gene family.
+				</li>
+				<li>
+					All gene strings are clustered in order to display genes with a similar local gene organization in close proximity of each other (~positional homologs).
+				</li>
+				<li>
+					<strong>This tool can be found at <em>Analyze → Synteny plot</em></strong>
+				</li>
+			</ul>
+		</div>
+		<div style="clear:both;width:100%">&nbsp;</div>
+	</div>
+	<div class="doku_information doku_v_3+" style="display: block;">
+		<h3 id="synteny_plot">Synteny plot</h3>
+		<div style="width:30%;float:right;">
+			<div class="thumb2 tright" style="width:210px">
+				<div class="thumbinner">
+					<a href="https://bioinformatics.psb.ugent.be/plaza//img/doku/synteny_HOM04D003135.png"><img src="https://bioinformatics.psb.ugent.be/plaza/img/doku/synteny_HOM04D003135.png" alt="" width="200"></a>					<div class="thumbcaption">Partial Synteny plot from gene family <strong>HOM04D003135</strong></div>
+				</div>
+			</div>
+		</div>
+		<div style="width:65%;float:left;">
+			<ul>
+				<li>
+					The Synteny plot reports the local gene organization for homologous genes within a family.
+				</li>
+				<li>
+					Starting from a selected family the gene organization of all homologs of that family is reported.
+					Strand information and different gene types are indicated by arrows and other symbols (see Legend), respectively, and genes belonging to the same gene family are coded by the same color.
+				</li>
+				<li>
+					Functional annotation information from the gene family is always displayed, and can be easily compared to other genes/gene families by clicking on the genes in the plot.
+				</li>
+				<li>
+					When hovering over a single gene, all genes of the same gene family within the same view
+				</li>
+				<li>
+					<span>A variety of options are available to the end-user to help with the analysis of the gene family in question :</span>
+					<ul>
+						<li>
+							The window size option makes it possible to change the number of genes around the locus from the selected gene family (5, 10 or 15 genes).
+						</li>
+						<li>
+							The strand orientation option can be used to draw all genes on the forward strand, or use the original gene orientation.
+						</li>
+						<li>
+							The syntenic regions are clustered by default by the PLAZA platform to place the most similar ones together.
+							If required however, syntenic regions can also be clustered by species.
+						</li>
+						<li>
+							Both a species and clade selection option are available, allowing the end-user to narrow down the view in order not to be overwhelmed by the large amount of data available.
+						</li>
+						<li>
+							The end-user can set both the number of syntenic regions on a single page, as well as select the page to be displayed.
+						</li>
+					</ul>
+				</li>
+				<li>
+					<strong>This tool can be found at <em>Analyze → Synteny plot</em></strong>
+				</li>
+			</ul>
+		</div>
+		<div style="clear:both;width:100%">&nbsp;</div>
+	</div>
+	<!-- end synteny plot -->
+
+	<!-- begin wgdotplot : put additional markers inside to differentiate between the additional WGDotplot visualizations (applet/image/javascript)-->
+	<div class="doku_information doku_v_all" style="display: block;">
+		<h3 id="wgdotplot">WGDotplot</h3>
+		<div style="width:30%;float:right;">
+			<div class="thumb2 trien" style="width:210px">
+				<div class="thumbinner">
+					<a href="https://bioinformatics.psb.ugent.be/plaza//img/doku/dotplot_pt_pt_1.png"><img src="https://bioinformatics.psb.ugent.be/plaza/img/doku/dotplot_pt_pt_1.png" alt="" width="200"></a>					<div class="thumbcaption">Poplar-poplar WGDotplot showing two waves of genome duplication</div>
+				</div>
+			</div>
+		</div>
+		<div style="width:65%;float:left;">
+			<ul class="doku_information doku_v_all" style="display: block;">
+				<li>
+					The WGDotplot reports in a pairwise manner all colinear regions between and/or within species.
+				</li>
+				<li>
+					Starting from the selected species the WGDotplot gives a graphical overview of the gene colinearity identified using i-ADHoRe.
+					Similarly, selecting the same species reports all duplicated blocks found within the genome (intra-species comparison).
+					If available, the age of the block paralogs determined using Ks is report using a color code.
+					Clicking a specific cell in the dotplot gives a more detailed view of the colinearity between the two selected chromosomes.
+					Finally, clicking on a colinear region returns the gene order alignment (~multiplicon) of these colinear regions.
+					In this <span class="curid"><a href="https://bioinformatics.psb.ugent.be/plaza/documentation/tools#multiplicon_view">Multiplicon View</a></span>, you have the possibility to click through to higher level multiplicons, detected using a profile build from the current multiplicon (<a href="https://bioinformatics.psb.ugent.be/plaza/documentation/construction_settings#i-adhore">i-ADHoRe</a>).
+				</li>
+				<li>
+					Note that due to <a href="https://bioinformatics.psb.ugent.be/plaza/documentation/construction_settings#i-adhore">i-ADHoRe</a>'s tandem remapping some chromosomes might appear to have a slightly smaller number of genes then in the actual annotation.
+					See the <a href="https://bioinformatics.psb.ugent.be/plaza/documentation/faq#tools">FAQ</a> for more details.
+				</li>
+			</ul>
+			<ul class="doku_information doku_v_1" style="display: none;">
+				<li>
+					The second plot 'Chromosome mapping of colinear regions' displays the location of the colinear regions on the chromosomes using a nucleotide-based scale (compared to a gene-based scale in the upper panel).
+				</li>
+				<li>
+					If defined for the selected species, the artificial concatenated chromosome 00 (more info in <a href="https://bioinformatics.psb.ugent.be/plaza/documentation/construction#annotation">Construction</a>) is excluded from the dotplots.
+				</li>
+			</ul>
+			<ul class="doku_information doku_v_2 doku_v_3" style="display: none;">
+				<li>
+					There are two versions of the WGDotplot available: the standard version (which uses an <abbr title="HyperText Markup Language">HTML</abbr> clickable map) and the Java Applet version.
+					The standard version supports the display of colinear regions between two species, while the interactive Applet version has no restrictions on the number of species.
+				</li>
+				<li>
+					The Java Applet provides intuitive functions to hide and rearrange the position of chromosomes (drag chromosomes name), adapt color usage (Settings meny) and use stepless zoom features to browse genomic colinearity between multiple species (scroll with mouse).
+				</li>
+				<li>
+					In the standard version, the second plot 'Chromosome mapping of colinear regions' displays the location of the colinear regions on the chromosomes using a nucleotide-based scale (compared to a gene-based scale in the upper panel).
+				</li>
+				<li>
+					If defined for the selected species, the artificial concatenated chromosome 00 (more info in <a href="https://bioinformatics.psb.ugent.be/plaza/documentation/construction#annotation">Construction</a>) is excluded from the dotplots.
+				</li>
+			</ul>
+			<ul class="doku_information doku_v_4+" style="display: block;">
+				<li>
+					There are two versions of the WGDotplot available: the standard version (which uses an <abbr title="HyperText Markup Language">HTML</abbr> clickable map) and the JavaScript version.
+				</li>
+				<li>
+					The interactive JavaScript version allows for the seamless zooming of colinear regions, while also offering more interactivity with regards to the display of additional information and linkouts.
+				</li>
+				<li>
+					In the standard version, the second plot 'Chromosome mapping of colinear regions' displays the location of the colinear regions on the chromosomes using a nucleotide-based scale (compared to a gene-based scale in the upper panel).
+				</li>
+			</ul>
+			<ul class="doku_information doku_v_all" style="display: block;">
+				<li>
+					<strong>This tool can be found at <em>Analyze → WGDotplot</em></strong>
+				</li>
+			</ul>
+		</div>
+		<div style="clear:both;width:100%">&nbsp;</div>
+	</div>
+	<!-- end wgdotplot -->
+</div>
+
+
+<!-- ################################################################################################################ -->
+<!-- localization -->
+<div class="doku_information doku_v_all" style="display: block;">
+	<h2 id="localization">Localization</h2>
+
+	<!-- start functional clustering -->
+	<div class="doku_information doku_v_2+" style="display: block;">
+		<h3 id="functional_clustering">Functional clustering</h3>
+		<div style="width:20%;float:right;">
+			<div class="thumb2 tright" style="width:160px">
+				<div class="thumbinner">
+					<a href="https://bioinformatics.psb.ugent.be/plaza//img/doku/functional_clustering.png"><img src="https://bioinformatics.psb.ugent.be/plaza/img/doku/functional_clustering.png" alt="" width="200"></a>					<div class="thumbcaption">Functional clusters in chromosome 1 of Arabidopsis thaliana</div>
+				</div>
+			</div>
+		</div>
+		<div style="width:75%;float:left;">
+			<ul>
+				<li>
+					Physical clustering of functionally related genes.
+				</li>
+				<li>
+					Functional clusters of genes were detected using <a href="https://bioinformatics.psb.ugent.be/plaza/documentation/construction_settings#c-hunter">C-Hunter</a> using all gene-GO annotations.
+					C-Hunter was run with different settings (<a href="https://bioinformatics.psb.ugent.be/plaza/documentation/construction_settings#c-hunter">check settings here</a>) and the results are stored as different experiments.
+				</li>
+				<li>
+					The functional clustering visualization tool gives an overview of the location and content of each functional cluster on a chromosome-wide scale.
+					Each cluster in the image is clickable and redirects to an overview page of the cluster, detailing the genes present in the cluster as well as their associated gene families.
+				</li>
+				<li>
+					<strong>This tool can be found at <em>Analyze → Functional clusters</em></strong>.
+				</li>
+			</ul>
+		</div>
+		<div style="clear:both;width:100%">&nbsp;</div>
+	</div>
+	<!-- end functional clustering -->
+
+	<!-- start whole genome mapping -->
+	<div class="doku_information doku_v_all" style="display: block;">
+		<h3 id="wgmapping">WGMapping</h3>
+		<div style="width:20%;float:right;">
+			<div class="thumb2 tright" style="width:210px">
+				<div class="thumbinner">
+					<div class="doku_information doku_v_1 doku_v_2 doku_v_3 doku_v_4" style="display: none;">
+						<a href="https://bioinformatics.psb.ugent.be/plaza//img/doku/auxins_distribution.png"><img src="https://bioinformatics.psb.ugent.be/plaza/img/doku/auxins_distribution.png" alt="" width="200"></a>						<div class="thumbcaption">WGMapping tool displaying all <em>Arabidopsis</em> genes with auxin in their description</div>
+					</div>
+					<div class="doku_information doku_v_5" style="display: block;">
+						<a href="https://bioinformatics.psb.ugent.be/plaza//img/doku/wgmapping_zma.png"><img src="https://bioinformatics.psb.ugent.be/plaza/img/doku/wgmapping_zma.png" alt="" width="200"></a>						<div class="thumbcaption">WGMapping tool displaying two different gene sets in <em>Zea mays</em>: one obtained from the import of a maize GLK2 ChIP-Seq experiment (red) and one annotated with the photosynthesis GO term GO:0015979 (blue).</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div style="width:75%;float:left;">
+			<ul>
+				<li>
+					The Whole Genome Mapping tool displays the organization of a set of genes on all chromosomes of a selected species.
+				</li>
+				<li>
+					<div class="doku_information doku_v_1 doku_v_2 doku_v_3 doku_v_4" style="display: none;">
+						The WGMapping tool has 2 different modes of operation.
+						Either all genes are selected and displayed on the chromosomes of the species, and then the gene type (either coding, rna, TE or pseudo) is displayed.
+						In a second mode the user defines a gene set (using either GO label, InterPro domain, Reactome pathway, gene family or workbench), and then those genes are displayed on their respective locations on the chromosomes.
+						Additionally, the type of duplication (block or tandem, if applicable) for those genes is also displayed.
+						See also <a href="https://bioinformatics.psb.ugent.be/plaza/documentation/faq#tools">FAQ Block/Tandem duplicates</a>.
+					</div>
+					<div class="doku_information doku_v_5" style="display: block;">
+						The user defines a gene set (using either GO/MapMan label, InterPro domain, gene family or workbench) and selects a species; 
+						these genes are then displayed in their respective positions on the chromosomes. As an option, duplication information (block or tandem, if applicable) 
+						for those genes can also be displayed (see <a href="https://bioinformatics.psb.ugent.be/plaza/documentation/faq#tools">FAQ Block/Tandem duplicates</a>). 
+						As you hover over it, each gene identifier is shown, along with its exact position. Additionally, by clicking on the single chromosome, 
+						this is displayed horizontally and can be explored in greater detail.
+					</div>
+				</li>
+				<li>
+					Because not all species have their annotated genes gathered in chromosomes, but rather scaffolds, this tool might be less suitable for some of those species.
+					To circumvent this problem, we therefore display all genomic regions (covering a selected gene) sorted according to chromosome or scaffold length.
+				</li>
+				<li>
+					<strong>This tool can be found at <em>Analyze → WGMapping</em>.
+					Alternatively, it can be started from your workbench (<em>Analyze → Workbench</em>), where it can be used to map all genes from an experiment.
+					Other pages representing sets of genes (Gene Ontology, InterPro, Gene Family) also provide direct links to this tool. </strong>
+				</li>
+			</ul>
+		</div>
+		<div style="clear:both;width:100%">&nbsp;</div>
+	</div>
+	<!-- end whole genome mapping -->
+</div>
+
+<!-- ################################################################################################################ -->
+<!-- workbench -->
+<div class="doku_information doku_v_all" style="display: block;">
+	<h2 id="workbench">Workbench</h2>
+	<p>
+		<strong>Toolkit included in PLAZA that allows researchers to perform analyses on user-defined gene sets. </strong>
+	</p>
+
+	<!-- start GO enrichment -->
+	<div class="doku_information doku_v_all" style="display: block;">
+		<h3 id="go_enrichment">GO enrichment</h3>
+		<div style="width:20%;float:right;">
+			<div class="thumb2 trien" style="width:210px">
+				<div class="thumbinner">
+					<div class="doku_information doku_v_1 doku_v_2" style="display: none;">
+						<a href="https://bioinformatics.psb.ugent.be/plaza//img/doku/enrichment.png"><img src="https://bioinformatics.psb.ugent.be/plaza/img/doku/enrichment.png" alt="" width="200"></a>						<div class="thumbcaption">Bar chart displaying enriched (or depleted) molecular function GO labels in a set of auxin related genes</div>
+					</div>
+					<div class="doku_information doku_v_3+" style="display: block;">
+						<a href="https://bioinformatics.psb.ugent.be/plaza//img/doku/go_enrichment_js.png"><img src="https://bioinformatics.psb.ugent.be/plaza/img/doku/go_enrichment_js.png" alt="" width="200"></a>						<div class="thumbcaption">Bar chart displaying enriched (or depleted) biological process GO terms for a gene set</div>
+					</div>
+				</div>
+				<div class="thumbinner" style="margin-top:20px;">
+					<div class="doku_information doku_v_1 doku_v_2 doku_v_3 doku_v_4" style="display: none;">
+						<a href="https://bioinformatics.psb.ugent.be/plaza//img/doku/go_enrichment_graph.png"><img src="https://bioinformatics.psb.ugent.be/plaza/img/doku/go_enrichment_graph.png" alt="" width="200"></a>						<div class="thumbcaption">Graph visualization of enriched and depleted biological process GO terms</div>
+					</div>
+					<div class="doku_information doku_v_5" style="display: block;">
+						<a href="https://bioinformatics.psb.ugent.be/plaza//img/doku/go_enrichment_graph_5.png"><img src="https://bioinformatics.psb.ugent.be/plaza/img/doku/go_enrichment_graph_5.png" alt="" width="200"></a>						<div class="thumbcaption">Graph visualization of enriched and depleted biological process GO terms</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div style="width:75%;float:left;">
+			<ul class="doku_information doku_v_all" style="display: block;">
+				<li>
+					Determines the over-representation of a certain GO term in a gene set compared to the genome-wide background frequency.
+				</li>
+				<li>
+					For a selected gene set it might be relevant to know if these genes have a related function or are involved in a specific biological process.
+					This analysis can be done for the genes in your workbench using the GO enrichment tool.
+					This tool will compare the occurrence of a certain GO label in a gene set (~workbench experiment) with the occurrence in the genome.
+					The significance of over- or under-representation is determined using the hypergeometric distribution and the Bonferroni method is applied to correct for multiple testing.
+					Note that enrichment folds are reported in <strong>log2 scale</strong> (e.g. value = 1 is two-fold enriched; value = -1 is two-fold depleted); in order to have the non-transformed enrichment/depletion values, use the power-operation (e.g. 2^1=2 : two fold enrichment; 2^-1=0.5 : two fold depletion).
+				</li>
+				<li>
+					In the table output, GO terms flagged with 'Shown = X (no)' refer to parental terms showing less significant results compared to their related child terms, which will have 'Shown = V (yes)'.
+				</li>
+				<li>
+					Additionally, the GO enrichment page offers linkouts to the graph-representation of the enriched/depleted GO terms per GO category.
+				</li>
+				<li>
+					It is important to note a difference between PLAZA v1.0/v2.0/v2.5 and PLAZA v3.0 and higher: in the older PLAZA versions the ratios were computed using all genes, while in the newer PLAZA versions we used only the genes which have any associated GO term. This difference in starting conditions might cause some differences in output between the PLAZA versions.
+				</li>
+				<li>
+					<strong>This tool can only be found on the workbench (<em>Analyze → Workbench</em> log-in required) in the toolbox on the experiment overview page.</strong>
+				</li>
+			</ul>
+		</div>
+		<div style="clear:both;width:100%">&nbsp;</div>
+	</div>
+	<!-- stop GO enrichment -->
+
+	<!-- start orthologous genes retrieval -->
+	<div class="doku_information doku_v_2+" style="display: block;">
+		<h3 id="orthologous_genes_retrieval">Orthologous genes retrieval</h3>
+		<div class="doku_information doku_v_2+" style="padding-left: 30px; display: block;">
+			<h4 id="using_the_plaza_integrative_method">Using the PLAZA integrative orthology method</h4>
+			<ul>
+				<li>
+					Retrieval of orthologous genes through the <a href="https://bioinformatics.psb.ugent.be/plaza/documentation/data_content#orthologous_genes">PLAZA integrative method</a> provides a comprehensive way of finding, for a set of genes, orthologous genes in another species.
+					The integrative method combines multiple methods (evidence types) to predict orthology.
+				</li>
+				<li>
+					<span>These basics need to be taken when searching for orthologous genes:</span>
+					<ol>
+						<li>
+							Select the <strong>source species</strong>. This list is limited by the genes present in the workbench experiment gene set.
+						</li>
+						<li>
+							Select the <strong>target species</strong>. Orthologous relationships are defined as being between 2 species.
+						</li>
+						<li>
+							Select the appropriate <strong>orthologous relationship(s)</strong>.
+							When a gene has no paralogs and only 1 ortholog, this is a 1-1 orthologous relationship.
+							This type of relationship is highly advantageous for the transfer of functional assessments between different species.
+							Similarly, when a gene has 1 or more paralog(s) and only 1 ortholog, this is an N-1 orthologous relationship (N is implied to be larger than 1).
+							Considering different scenario's, this leads to four different orthology relationship types: 1-1, N-1, 1-N, M-N. Selection of one or more of these types will result in the corresponding types of orthology relationships to be included in the output.
+						</li>
+						<li>
+							Select the accepted <strong>evidence types</strong>.
+							The PLAZA integrative method is based on the combination of different <a href="https://bioinformatics.psb.ugent.be/plaza/documentation/data_content#orthologous_genes">methods</a> for orthology detection.
+							Selection of these evidence types will result in the corresponding genes to be accepted as orthologs.
+							When an evidence type is not selected, then data associated with this evidence will simply be ignored.
+						</li>
+						<li>
+							Select the <strong>minimum number of evidence types</strong> which are required for an orthologous relationship to be acknowledged.
+							This number will also be used to determine the paralogous relationships (which are needed to determine what kind of orthology types are present).
+						</li>
+					</ol>
+				</li>
+				<li>
+					<span>For example, say gene A1 is orthologous with gene B1 and gene B2. </span>
+					<ul>
+						<li>
+							The supporting evidence types for the A1-B1 orthologous relationship are a)<em>Colinearity</em> b)<em>Orthologous gene family</em> c)<em>Best-Hits-and-Inparalogs (BHI)</em>.
+						</li>
+						<li>
+							The supporting evidence types for the A1-B2 orthologous relationship are a)<em>Orthologous gene family</em> b)<em>Phylogenetic tree inference</em>.
+						</li>
+						<li>
+							With the standard settings (all orthologous relationship types allowed, all evidence types taken into account, minimum number of required evidence is 1), then the result would be a 1-N (1-2 actually) orthology relationship between A1 and B1,B2.
+							However, it is clear that B1 has more supporting evidence than B2, for their relationship with A1.
+							Therefore, when putting the minimum required evidence types at 3, the A1-B2 relationship will not be taken into account, and a 1-1 orthology relationship between A1-B1 will be the result.
+						</li>
+					</ul>
+				</li>
+				<li>
+					<strong>This tool can only be found on the workbench (<em>Analyze → Workbench</em> log-in required) in the toolbox on the experiment overview page.</strong>
+				</li>
+			</ul>
+		</div>
+		<div class="doku_information doku_v_2+" style="padding-left: 30px; display: block;">
+			<h4 id="using_the_plaza_gene_families">Using the PLAZA gene families</h4>
+			<ul>
+				<li>
+					Retrieval of orthologous genes using the PLAZA gene families is a simpler version where orthologous genes are retrieved based on a copy-number filter (M and N for target and source species, respectively) using homologous gene families.
+				</li>
+				<li>
+					<strong>This tool can only be found on the workbench (<em>Analyze → Workbench</em> log-in required) in the toolbox on the experiment overview page.</strong>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<!-- end orthologous genes retrieval -->
+
+	<!-- start workbench transfer tool -->
+	<div class="doku_information doku_v_2" style="display: none;">
+		<h3 id="transfer_of_workbench_experiments">Transfer of workbench experiments</h3>
+		<ul>
+			<li>
+				It is possible to transfer workbench experiments between different PLAZA versions.
+			</li>
+			<li>
+				This feature is available on the <em>experiments</em> page of the workbench, after the user has logged in.
+			</li>
+			<li>
+				Mapping between gene identifiers is done by utilizing the <a href="https://bioinformatics.psb.ugent.be/plaza/documentation/tools#gene_identifier_conversion">Gene Identifier Conversion tool</a>			</li>
+		</ul>
+	</div>
+	<!-- end workbench transfer tool -->
+</div>
+
+
+<!-- ################################################################################################################ -->
+<!-- other tools -->
+<div class="doku_information doku_v_all" style="display: block;">
+	<h2 id="other">Other</h2>
+
+	<!-- start genome browser -->
+	<div class="doku_information doku_v_1 doku_v_2" style="display: none;">
+		<div style="width:20%;float:right;">
+			<div class="thumb2 tright" style="width:210px">
+				<div class="thumbinner">
+					<a href="https://bioinformatics.psb.ugent.be/plaza//img/doku/anno_j.png"><img src="https://bioinformatics.psb.ugent.be/plaza/img/doku/anno_j.png" alt="" width="200"></a>					<div class="thumbcaption">Screenshot of AnnoJ displaying a number of gene models on <em>Arabidopsis thaliana</em> chromosome 2</div>
+				</div>
+			</div>
+		</div>
+		<div style="width:75%;float:left;">
+			<ul>
+				<li>
+					Tool that allows users to visually inspect the genomes, with various features mapped onto the raw sequence.
+				</li>
+				<li>
+					<span>To browse the raw genomic sequence and visualize various features (e.g. gene models) users can chose from 2 distinct genome browsers:</span>
+					<ol>
+						<li>
+							AnnoJ: this is a HTML5 browser based interactive genome browser which allows users to pan/zoom the sequence and associated features without reloading the page.
+						</li>
+						<li>
+							GenomeView : this is a Java based interactive genome browser, which has more features than AnnoJ, but requires a longer loading time.
+						</li>
+					</ol>
+				</li>
+				<li>
+					<strong>
+						This tool can be found on the organism pages.
+						Alternatively a gene of interest can be visualized in the genome browser through the gene page (<em>Toolbox → View → ...the gene in the Genome Browser</em> ).
+					</strong>
+				</li>
+			</ul>
+		</div>
+		<div style="clear:both;width:100%">&nbsp;</div>
+	</div>
+	<div class="doku_information doku_v_3" style="display: none;">
+		<div style="width:20%;float:right;">
+			<div class="thumb2 tright" style="width:210px">
+				<div class="thumbinner">
+					<a href="https://bioinformatics.psb.ugent.be/plaza//img/doku/genomeview.png"><img src="https://bioinformatics.psb.ugent.be/plaza/img/doku/genomeview.png" alt="" width="200"></a>					<div class="thumbcaption">Screenshot of GenomeView displaying a number of gene models from <em>Arabidopsis thaliana</em></div>
+				</div>
+			</div>
+		</div>
+		<div style="width:75%;float:left;">
+			<ul>
+				<li>
+					Tool that allows users to visually inspect the genomes, with various features mapped onto the raw sequence.
+				</li>
+				<li>
+					<span>To browse the raw genomic sequence and visualize various features (e.g. gene models) users can use the GenomeView genome browser.This genome browser has the following features:</span>
+					<ul>
+						<li>
+							Individual tracks can be rescaled or even hidden. This flexibility allows users to study the data they are interested in and hide everything else.
+						</li>
+						<li>
+							Currently only gene models and raw sequence data is viewable, but as more data will be added to the platform (e.g. cis-regulatory elements), these will become available in the genome browsers as well.
+						</li>
+					</ul>
+				</li>
+				<li>
+					<strong>
+						This tool can be found on the organism pages.
+						Alternatively a gene of interest can be visualized in the genome browser through the gene page (<em>Toolbox → View → ...the gene in the Genome Browser</em> ).
+					</strong>
+				</li>
+			</ul>
+		</div>
+		<div style="clear:both;width:100%">&nbsp;</div>
+	</div>
+	<div class="doku_information doku_v_4+" style="display: block;">
+		<div style="width:20%;float:right;">
+			<div class="thumb2 tright" style="width:210px">
+				<div class="thumbinner">
+					<a href="https://bioinformatics.psb.ugent.be/plaza//img/doku/igv_js.png"><img src="https://bioinformatics.psb.ugent.be/plaza/img/doku/igv_js.png" alt="" width="200"></a>					<div class="thumbcaption">Screenshot of IGV.js displaying a number of gene models from <em>Arabidopsis thaliana</em></div>
+				</div>
+			</div>
+		</div>
+		<div style="width:75%;float:left;">
+			<ul>
+				<li>
+					Tool that allows users to visually inspect the genomes, with various features mapped onto the raw sequence.
+				</li>
+				<li>
+					<span>To browse the raw genomic sequence and visualize various features (e.g. gene models) users can use the HTML5 IGV.js genome browser.This genome browser has the following features:</span>
+					<ul>
+						<li>
+							Individual tracks can be rescaled or even hidden. This flexibility allows users to study the data they are interested in and hide everything else.
+						</li>
+						<li>
+							Currently only gene models and raw sequence data is viewable, but as more data will be added to the platform (e.g. cis-regulatory elements), these will become available in the genome browsers as well.
+						</li>
+					</ul>
+				</li>
+				<li>
+					<strong>
+						This tool can be found on the organism pages.
+						Alternatively a gene of interest can be visualized in the genome browser through the gene page (<em>Toolbox → View → ...the gene in the Genome Browser</em> ).
+					</strong>
+				</li>
+			</ul>
+		</div>
+		<div style="clear:both;width:100%">&nbsp;</div>
+	</div>
+	<!-- end genome browser -->
+</div>
+
+
+<!-- ################################################################################################################ -->
+<!-- ################################################################################################################ -->
+<h1 id="third_party_tools">Third party tools</h1>
+<p>
+	Overview of the various used third-party tools within the PLAZA platform.
+</p>
+
+
+<div class="doku_information doku_v_all" style="display: block;">
+
+	<!-- begin archeopteryx -->
+	<div class="doku_information doku_v_1 doku_v_2 doku_v_3" style="display: none;">
+		<h3 id="atv_archaeopteryx">ATV / Archaeopteryx</h3>
+		<p>
+			Archaeopteryx (the successor to ATV) is a Java application based on the forester libaries for the visualization of annotated phylogenetic trees.
+			It can be used both as applets (ArchaeopteryxA, ArchaeopteryxE) and as a standalone application.
+		</p>
+		<p>
+			<a href="http://www.phylosoft.org/archaeopteryx/" target="_blank">Official Archaeopteryx website </a>
+		</p>
+	</div>
+	<!-- end archeopteryx -->
+
+	<!-- begin canvasxpress -->
+	<div class="doku_information doku_v_3 doku_v_4+" style="display: block;">
+		<h3 id="canvasxpress">canvasXpress</h3>
+		<p>
+			CanvasXpress is a standalone JavaScript library used for the visualization of charts, heatmaps, etc.
+		</p>
+		<p>
+			<a href="https://canvasxpress.org" target="_blank">Official canvasXpress website</a>
+		</p>
+	</div>
+	<!-- end canvasxpress -->
+
+	<!-- begin c-hunter -->
+	<div class="doku_information doku_v_all" style="display: block;">
+		<h3 id="c-hunter">C-Hunter</h3>
+		<p>
+			C-Hunter is a  clustering algorithm which incorporates knowledge of gene function derived from Gene Ontology ( <a href="http://www.geneontology.org" target="_blank">http://www.geneontology.org</a> ), with the organization of genes on chromosomes.
+		</p>
+		<p>
+			<a href="http://fcg.tamu.edu/C_Hunter/" target="_blank"> Official C-Hunter website </a>
+			<br>
+			<a href="http://bioinformatics.oxfordjournals.org/cgi/content/abstract/23/9/1053?etoc" target="_blank"> C-Hunter publication </a>
+		</p>
+	</div>
+	<!-- end c-hunter -->
+
+	<!-- begin d3.js -->
+	<div class="doku_information doku_v_3+" style="display: block;">
+		<h3 id="d3js">D3.js</h3>
+		<p>
+			D3.js is a JavaScript library for manipulating documents based on data. Various visualizations within the PLAZA framework are based on this library.
+		</p>
+		<p>
+			<a href="https://d3js.org/" target="_blank">Official D3.js website</a>
+		</p>
+	</div>
+	<!-- end d3.js -->
+
+	<!-- begin genomeview -->
+	<div class="doku_information doku_v_1 doku_v_2 doku_v_3" style="display: none;">
+		<h3 id="genomeview">Genomeview</h3>
+		<p>
+			GenomeView is a Java application designed for genome browsing, gene model annotation and next-generation sequence data visualization and usage (e.g. in combination with gene annnotation).
+			It can be both used as an applet or as a standalone application.
+		</p>
+		<p>
+			<a href="http://www.genomeview.org" target="_blank"> Official Genomeview website </a>
+		</p>
+	</div>
+	<!-- end genomeview -->
+
+	<!-- begin igv.js -->
+	<div class="doku_information doku_v_4+" style="display: block;">
+		<h3 id="igv_js">IGV.js</h3>
+		<p>
+			Lightweight HTML-5 version of the <a href="http://www.broadinstitute.org/igv" target="_blank">Integrative Genomics Viewer</a>.
+		</p>
+		<p>
+			<a href="https://github.com/igvteam/igv.js" target="_blank">IGV.js source page</a>
+		</p>
+	</div>
+	<!-- end igv.js -->
+
+	<!-- begin jalview -->
+	<div class="doku_information doku_v_1 doku_v_2 doku_v_3" style="display: none;">
+		<h3 id="jalview">Jalview</h3>
+		<p>
+			Jalview (2009) is a fast Java multiple alignment editor and analysis tool.
+		</p>
+		<p>
+			<a href="http://www.jalview.org/" target="_blank"> Official Jalview website </a>
+		</p>
+	</div>
+	<!-- end jalview -->
+
+	<!-- begin msaviewer -->
+	<div class="doku_information doku_v_4+" style="display: block;">
+		<h3 id="msaviewer">MSAViewer</h3>
+		<p>
+			MSAs help researchers to discover novel differences (or matching patterns) that appear in many sequences.
+			The MSAViewer is a modular, reusable component to visualize large MSAs interactively on the web.
+		</p>
+		<p>
+			<a href="http://msa.biojs.net/" target="_blank">Official MSAViewer website</a>
+		</p>
+	</div>
+	<!-- end msaviewer -->
+
+	<!-- begin phyd3 -->
+	<div class="doku_information doku_v_4+" style="display: block;">
+		<h3 id="phyd3">PhyD3</h3>
+		<p>
+			PhyD3 is a phylogenetic tree viewer based on d3.js.
+			It was developed as an alternative to Archaeopteryx inspired by d3.phylogram.js.
+		</p>
+		<p>
+			<a href="https://phyd3.bits.vib.be/" target="_blank">Official PhyD3 website</a>
+		</p>
+	</div>
+	<!-- end phyd3 -->
+</div>
+
+<h1 id="tools_and_parameters">Tools and parameters</h1>
+<div>
+	<p>
+		<a href="https://bioinformatics.psb.ugent.be/plaza/documentation/construction_settings">An overview of all tools and parameter settings used in PLAZA.</a>	</p>
+</div>
