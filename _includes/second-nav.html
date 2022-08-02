@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light mb-5 shadow-sm" aria-label="Twelfth navbar example">
+<nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom mb-5 shadow-sm" aria-label="Twelfth navbar example">
     <div class="container">
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar2" aria-controls="navbar2" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -6,21 +6,36 @@
 
         <div class="navbar-collapse justify-content-md-center collapse" id="navbar2">
             <ul class="navbar-nav">
-                <li class="nav-item ms-0 ms-lg-3">
-                    <a class="nav-link" href="#">Data Content</a>
+                {%- for item in page.second-nav %}
+                <li class="nav-item {% if item.subitems %}dropdown {% endif %}ms-0 ms-lg-3 mt-2 mt-lg-0">
+                    {%- assign page_sidebar = page.sidebar | downcase | replace: "-", "_" | replace: " ", "_" %}
+                    {%- assign nav_title = item.title | downcase | replace: "-", "_" | replace: " ", "_" %}
+                    {%- if item.external_url %}
+                    <a class="nav-link" href="{{item.external_url}}" target="_blank" rel="noopener">{{item.title}}</a>
+                    {%- elsif page.url == item.url or page_sidebar == nav_title %}
+                    <a class="nav-link active" aria-current="page" href="{{item.url | relative_url }}">{{item.title}}</a>
+                    {%- elsif item.subitems %}
+                    <a class="nav-link dropdown-toggle" href="#" id="Dropdown{{item.title | jsonify }}" role="button" data-bs-toggle="dropdown" aria-expanded="false">{{item.title}}</a>
+                    <ul class="dropdown-menu" aria-labelledby="Dropdown{{item.title | jsonify }}">
+                        {%- for subitem in item.subitems %}
+                        <li>
+                            {%- if subitem.hr == true %}
+                            <hr class="dropdown-divider">
+                            {%- elsif page.url == subitem.url %}
+                            <a class="dropdown-item active" href="{{subitem.url | relative_url }}">{{ subitem.title }}</a>
+                            {%- elsif subitem.external_url %}
+                            <a class="dropdown-item" href="{{subitem.external_url}}" target="_blank" rel="noopener">{{subitem.title}}</a>
+                            {%- else %}
+                            <a class="dropdown-item" href="{{subitem.url | relative_url }}">{{ subitem.title }}</a>
+                            {%- endif %}
+                        </li>
+                        {%- endfor %}
+                    </ul>
+                    {%- else %}
+                    <a class="nav-link" href="{{item.url | relative_url }}">{{item.title}}</a>
+                    {%- endif %}
                 </li>
-                <li class="nav-item ms-0 ms-lg-3">
-                    <a class="nav-link" href="#">Construction</a>
-                </li>
-                <li class="nav-item ms-0 ms-lg-3">
-                    <a class="nav-link" href="#">Tools</a>
-                </li>
-                <li class="nav-item ms-0 ms-lg-3">
-                    <a class="nav-link" href="#">API</a>
-                </li>
-                <li class="nav-item ms-0 ms-lg-3">
-                    <a class="nav-link" href="#">Data Warehouse</a>
-                </li>
+                {%- endfor %}
             </ul>
         </div>
     </div>

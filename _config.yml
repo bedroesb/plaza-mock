@@ -7,15 +7,14 @@ exclude:
   - Gemfile*
   - LICENSE
 
-
+permalink: pretty
 defaults:
   -
     scope:
       path: ""
       type: "pages"
     values:
-      permalink: /:basename
-      layout: "page"
+      layout: "default"
 
 plugins:
   - jemoji

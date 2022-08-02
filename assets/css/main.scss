@@ -7,14 +7,48 @@ permalink: assets/css/main.css
 @import "bootstrap/bootstrap";
 
 
+/*-----General styling-----*/
+
+main {
+    a:not(.btn) {
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+        -ms-word-break: break-all;
+        word-break: break-word;
+
+        &:hover {
+            text-decoration: underline;
+
+        }
+    }
+
+    ol li,
+    ul li {
+        margin: 10px 0px;
+
+        &::marker {
+            color: $primary;
+            font-weight: 600;
+        }
+    }
+
+    img {
+        @extend .img-fluid;
+    }
+}
+
+
+/*-----Top navigation-----*/
+
+
 #navbar1 .nav-item>a:not(.dropdown-toggle) {
     border-radius: $btn-border-radius;
     border-bottom-color: $primary;
-    margin: 4px 0 4px 0;
+    margin: $spacer * .25 0 $spacer * .25 0;
     &.active,
     &:hover {
         border-bottom-style: solid;
-        border-bottom-width: 4px;
+        border-bottom-width: $spacer * .25,;
         margin-bottom: 0px;
     }
 }
@@ -26,7 +60,7 @@ permalink: assets/css/main.css
     &.active,
     &:hover {
         border-bottom-style: solid;
-        border-bottom-width: 4px;
+        border-bottom-width: $spacer * .25,;
         margin-bottom: 0px;
     }
 }
