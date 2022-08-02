@@ -1,5 +1,4 @@
-title: ELIXIR toolkit theme
-# This appears in the html browser tab for the site title (seen mostly by search engines, not users)
+title: PLAZA
 
 exclude:
   - .gitignore
