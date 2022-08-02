@@ -1,0 +1,54 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark {% unless page.second-nav %}mb-5 shadow-sm{% endunless %}" aria-label="Twelfth navbar example">
+    <div class="container">
+        <a href="/" class="text-white text-decoration-none fs-1 ">
+            <span><strong>PLAZA</strong></span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar1" aria-controls="navbar1" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="navbar-collapse justify-content-md-end collapse" id="navbar1">
+            <ul class="navbar-nav">
+                <li class="nav-item ms-0 ms-lg-3 mt-2 mt-lg-0">
+                    <a href="{{'/' | relative_url}}" class="nav-link {% if page.url == '/index' %}active{% endif %}">
+                        Home
+                    </a>
+                </li>
+                <li class="nav-item ms-0 ms-lg-3 mt-2 mt-lg-0">
+                    <a href="{{'/tools' | relative_url}}" class="nav-link {% if page.url == '/tools' %}active{% endif %}">
+                        Tools
+                    </a>
+                </li>
+                <li class="nav-item ms-0 ms-lg-3 mt-2 mt-lg-0">
+                    <a href="{{'/documentation' | relative_url}}" class="nav-link {% if page.url == '/documentation' %}active{% endif %}">
+                        Documentation
+                    </a>
+                </li>
+                <li class="nav-item ms-0 ms-lg-3 mt-2 mt-lg-0">
+                    <a href="{{'/about' | relative_url}}" class="nav-link {% if page.url == '/about' %}active{% endif %}">
+                        About
+                    </a>
+                </li>
+                
+                <li class="nav-item dropdown ms-0 ms-lg-3 mt-2 mt-lg-0">
+                    <a class="nav-link btn btn-primary text-white dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false"><i class="fa-solid fa-pen me-2"></i>{% if page.instance %}{{page.instance}}{%- else %}Select instance{% endif %}</a>
+                    <ul class="dropdown-menu dropdown-menu-dark p-2 rounded-3 mx-0 border-0 shadow">
+                        <li><a class="dropdown-item rounded {% if page.url == '/dictots_5' %}active{% endif %}" href="{{'/dictots_5' | relative_url}}">Dicots PLAZA 5.0</a></li>
+                        <li><a class="dropdown-item rounded" href="#">Monocots PLAZA 5.0 </a></li>
+                        <li><a class="dropdown-item rounded" href="#">Diatoms PLAZA 1.0</a></li>
+                        <li><a class="dropdown-item rounded" href="#">pico-PLAZA 3.0</a></li>
+                        <li><a class="dropdown-item rounded" href="#">Dicots PLAZA 4.5</a></li>
+                        <li><a class="dropdown-item rounded" href="#">Monocots PLAZA 4.5</a></li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li><a class="dropdown-item rounded" href="#">Dicots PLAZA 4.0</a></li>
+                        <li><a class="dropdown-item rounded" href="#">Monocots PLAZA 4.0</a></li>
+                        <li><a class="dropdown-item rounded" href="#">pico-PLAZA 2.0</a></li>
+                        <li><a class="dropdown-item rounded" href="#">Dicots PLAZA 3.0</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>

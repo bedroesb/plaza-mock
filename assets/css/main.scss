@@ -7,15 +7,27 @@ permalink: assets/css/main.css
 @import "bootstrap/bootstrap";
 
 
-.navbar-nav .nav-item>a {
-    @include transition(border-bottom-style .15s ease-in-out);
-    border-bottom-color: $primary;
-    border-bottom-width: 4px;
+#navbar1 .nav-item>a:not(.dropdown-toggle) {
     border-radius: $btn-border-radius;
-    margin-bottom: -4px;
+    border-bottom-color: $primary;
+    margin-bottom: 4px;
     &.active,
     &:hover {
         border-bottom-style: solid;
+        border-bottom-width: 4px;
+        margin-bottom: 0px;
+    }
+}
+
+#navbar2 .nav-item>a:not(.dropdown-toggle) {
+    border-radius: $btn-border-radius;
+    margin-bottom: 4px;
+    border-bottom-color: $dark;
+    &.active,
+    &:hover {
+        border-bottom-style: solid;
+        border-bottom-width: 4px;
+        margin-bottom: 0px;
     }
 }
 
