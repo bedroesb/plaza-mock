@@ -1,8 +1,7 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark {% unless page.second-nav or page.instance %}mb-5 shadow-sm{% endunless %}" aria-label="Twelfth navbar example">
     <div class="container">
         <a href="{{'/' | relative_url}}" class="text-white text-decoration-none fs-1 d-flex align-items-baseline">
-            <span><strong>PLAZA</strong></span>
-            <img class="ms-2" alt="PLAZA logo" height="35px" src="{{'/assets/img/logo.svg' | relative_url}}">
+            <img alt="PLAZA logo" class="navbar-brand my-3"height="42px" src="{{'/assets/img/PLAZA_logo.svg' | relative_url}}">
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar1" aria-controls="navbar1" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -31,7 +30,7 @@
                     </a>
                 </li>
                 
-                <li class="nav-item dropdown ms-0 ms-lg-3 mt-lg-1">
+                <li class="nav-item dropdown ms-0 ms-lg-3 mt-lg-1 mt-2 mt-lg-0">
                     <a class="nav-link btn btn-primary text-white dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">{% if page.instance %}{{page.instance}}{%- else %}Select instance{% endif %}</a>
                     <ul class="dropdown-menu dropdown-menu-dark p-2 rounded-3 mx-0 border-0 shadow">
                         <li><a class="dropdown-item rounded {% if page.url == '/dicots_5/' %}active{% endif %}" href="{{'/dicots_5/' | relative_url}}">Dicots PLAZA 5.0</a></li>
